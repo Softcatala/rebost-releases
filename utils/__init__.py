@@ -12,7 +12,8 @@ def download_data(version, url, size, arch, os):
 
 
 def __from_bytes_to_human(size):
-    log = math.log(size, __base)
+
+    log = math.log(int(size), __base)
 
     fixed = math.floor(log)
     exp = log - fixed
