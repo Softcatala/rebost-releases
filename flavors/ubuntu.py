@@ -59,9 +59,10 @@ def __data(flavor, codename, version, v):
 
         hashes = requests.get(i.target.hash_file).content
         if i.verify_gpg_signature(hashes, i.target.hash_file_signed):
+            print(f"Getting {codename} {version}")
             filename, target_hash = i.hash()
             url = "%s/%s" % (i.target.url, filename)
-
+            print(f"Url {url}")
             r = requests.head(url)
             size = r.headers["Content-Length"]
 
