@@ -1,8 +1,24 @@
 import requests
+from cachetools import cached, TTLCache
 from ubuntu_release_info import data
 from ubuntu_iso_download import iso, url as uurl
 
-from .releases import __all
+from ubuntu.releases import __all
+from utils import download_data
+
+
+@cached(cache=TTLCache(maxsize=10, ttl=300))
+def get(flavor):
+    try:
+        if flavor == 'ubuntu':
+            return __desktop()
+        else:
+            return __other(flavor)
+    except:
+        pass
+
+    return None
+
 
 flavors = {
     "desktop": uurl.Desktop,
@@ -30,7 +46,6 @@ def __other(flavor):
             x = __data(f, r['codename'], r['version'], __lts_version if r['lts'] else __stable_version)
             if x is not None:
                 return [x]
-
 
 
 def __desktop():
@@ -66,12 +81,12 @@ def __data(flavor, codename, version, v):
             r = requests.head(url)
             size = r.headers["Content-Length"]
 
-            return {
-                'download_version': v(version),
-                'download_url': url.replace('http://', 'https://'),
-                'download_size': size,
-                'arquitectura': 'x86_64',
-                'download_os': 'multiplataforma'
-            }
+            return download_data(
+                version=v(version),
+                url=url.replace('http://', 'https://'),
+                size=size,
+                arch='x86_64',
+                os='multiplataforma'
+            )
     except Exception as e:
         print(e)

@@ -20,6 +20,13 @@ COPY Pipfile .
 COPY Pipfile.lock .
 RUN PIPENV_VENV_IN_PROJECT=1 pipenv install --deploy
 
+FROM python-deps as tests
+
+RUN PIPENV_VENV_IN_PROJECT=1 pipenv install --deploy --dev
+
+COPY . .
+RUN pipenv run pytest tests/
+RUN touch /tmp/tests
 
 FROM base AS runtime
 
@@ -31,6 +38,7 @@ ENV PATH="/.venv/bin:$PATH"
 
 
 COPY --from=python-deps /tmp/ubuntu-keyring-2021.03.26/keyrings/* /usr/share/keyrings/
+COPY --from=tests /tmp/tests /tmp/
 
 # Create and switch to a new user
 RUN useradd --create-home appuser

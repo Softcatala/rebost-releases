@@ -1,15 +1,15 @@
 from flask import Flask
 import json
-import flavors
+import ubuntu
 
 app = Flask(__name__)
 
 app.config['ENV'] = 'development'
 
 
-@app.route("/<flavor>")
-def ubuntu_data(flavor):
-    r = flavors.get(flavor)
+@app.route("/ubuntu/<flavor>")
+def ubuntu_route(flavor):
+    r = ubuntu.get(flavor)
     if r is not None:
         return json.dumps(r, indent=4)
     else:
