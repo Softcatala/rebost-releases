@@ -11,7 +11,9 @@ FROM base AS python-deps
 
 # Install pipenv and compilation dependencies
 RUN pip install pipenv
-RUN apt-get update && apt-get install -y --no-install-recommends gcc ubuntu-keyring
+RUN apt-get update && apt-get install -y --no-install-recommends gcc
+ADD http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2021.03.26.tar.gz /tmp/
+RUN tar xvzf /tmp/ubuntu-keyring_2021.03.26.tar.gz -C /tmp/
 
 # Install python dependencies in /.venv
 COPY Pipfile .
@@ -25,7 +27,8 @@ FROM base AS runtime
 COPY --from=python-deps /.venv /.venv
 ENV PATH="/.venv/bin:$PATH"
 
-COPY --from=python-deps /usr/share/keyrings/ubuntu-archive-keyring.gpg /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+COPY --from=python-deps /tmp/ubuntu-keyring-2021.03.26/keyrings/* /usr/share/keyrings/
 
 # Create and switch to a new user
 RUN useradd --create-home appuser
