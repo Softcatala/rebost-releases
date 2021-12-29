@@ -23,6 +23,8 @@ RUN PIPENV_VENV_IN_PROJECT=1 pipenv install --deploy
 
 FROM base AS runtime
 
+RUN apt-get update && apt-get install -y gpg
+
 # Copy virtual env from python-deps stage
 COPY --from=python-deps /.venv /.venv
 ENV PATH="/.venv/bin:$PATH"
@@ -37,6 +39,8 @@ USER appuser
 
 # Install application into container
 COPY . .
+
+EXPOSE 5000
 
 # Run the application
 ENTRYPOINT ["python", "handler.py"]
