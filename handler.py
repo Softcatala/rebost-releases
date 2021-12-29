@@ -16,4 +16,4 @@ def ubuntu_data(flavor):
         return "NoData", 404
 
 
-app.run()
+app.run(host="0.0.0.0")

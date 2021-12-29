@@ -53,4 +53,5 @@ jobs:
           JSON
           )
           echo $PAYLOAD
+          curl --request POST --header "Content-Type: application/json" "${{secrets.HOST}}" --data "$PAYLOAD"
           
