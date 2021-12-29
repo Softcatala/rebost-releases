@@ -70,7 +70,8 @@ def __data(flavor, codename, version, v):
                 'download_version': v(version),
                 'download_url': url.replace('http://', 'https://'),
                 'download_size': size,
-                'arquitectura': 'x86_64'
+                'arquitectura': 'x86_64',
+                'download_os': 'multiplataforma'
             }
     except Exception as e:
         print(e)
