@@ -17,18 +17,19 @@ def get():
         ),
         download_data(
             version,
-            url=f"https://inkscape.org/release/{version}/gnulinux/",
-            os='linux',
+            url=f"https://inkscape.org/release/inkscape-{version}/mac-os-x/dmg/dl/",
+            os='osx',
         ),
         download_data(
             version,
-            url=f"https://inkscape.org/release/{version}/gnulinux/",
-            os='linux',
+            url=f"https://inkscape.org/release/inkscape-{version}/windows/64-bit/exe/dl/",
+            arch='x86_64',
+            os='windows',
         ),
         download_data(
             version,
-            url=f"https://inkscape.org/release/{version}/gnulinux/",
-            os='linux',
+            url=f"https://inkscape.org/release/inkscape-{version}/windows/32-bit/exe/dl/",
+            arch='x86',
+            os='windows',
         )
     ]
-
