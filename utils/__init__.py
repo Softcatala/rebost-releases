@@ -3,7 +3,7 @@ import requests
 
 
 def get_content_size(url):
-    r = requests.head(url)
+    r = requests.head(url,allow_redirects=True)
     return r.headers["Content-Length"]
 
 
