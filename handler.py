@@ -3,6 +3,7 @@ import json
 
 import calibre
 import gimp
+import osmand
 import ubuntu
 import inkscape
 
@@ -14,13 +15,14 @@ app.config['ENV'] = 'development'
 @app.route("/")
 def index():
     return jsonify([
-        {'slug': 'ubuntu', 'path': '/ubuntu/ubuntu'},
-        {'slug': 'xubuntu', 'path': '/ubuntu/xubuntu'},
-        {'slug': 'kubuntu', 'path': '/ubuntu/kubuntu'},
-        {'slug': 'ubuntu-mate', 'path': '/ubuntu/ubuntu-mate'},
-        {'slug': 'inkscape', 'path': '/inkscape'},
-        {'slug': 'gimp', 'path': '/gimp'},
-        {'slug': 'calibre', 'path': '/calibre'},
+        {'wp': 'ubuntu', 'api': 'ubuntu/ubuntu'},
+        {'wp': 'xubuntu', 'api': 'ubuntu/xubuntu'},
+        {'wp': 'kubuntu', 'api': 'ubuntu/kubuntu'},
+        {'wp': 'ubuntu-mate', 'api': 'ubuntu/ubuntu-mate'},
+        {'wp': 'inkscape', 'api': 'inkscape'},
+        {'wp': 'gimp', 'api': 'gimp'},
+        {'wp': 'calibre', 'api': 'calibre'},
+        {'wp': 'mapa-catala-per-a-losmand', 'api': 'osmand'},
     ])
 
 
@@ -54,6 +56,15 @@ def gimp_route():
 @app.route("/calibre")
 def calibre_route():
     r = calibre.get()
+    if r is not None:
+        return jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/osmand")
+def osmand_route():
+    r = osmand.get()
     if r is not None:
         return jsonify(r)
     else:

@@ -25,7 +25,7 @@ def get_scoop(url):
     return js
 
 
-def download_data(version, url, size="", arch="generic", os="multiplataforma", get_size=False):
+def download_data(version, url, size="", arch="generic", os="multiplataforma", get_size=False, human_size=""):
 
     if get_size:
         try:
@@ -33,10 +33,13 @@ def download_data(version, url, size="", arch="generic", os="multiplataforma", g
         except:
             pass
 
+    if human_size == "" and size:
+        human_size = __from_bytes_to_human(size)
+
     return {
         'download_version': version,
         'download_url': url,
-        'download_size': __from_bytes_to_human(size) if size != "" else "",
+        'download_size': human_size,
         'arquitectura': arch,
         'download_os': os
     }
