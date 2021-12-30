@@ -1,11 +1,18 @@
 import math
+import requests
 
 
-def download_data(version, url, size, arch, os):
+def get_scoop(url):
+    r = requests.get(url)
+
+    return r.json()
+
+
+def download_data(version, url, size="", arch="generic", os="multiplataforma"):
     return {
         'download_version': version,
         'download_url': url,
-        'download_size': __from_bytes_to_human(size),
+        'download_size': __from_bytes_to_human(size) if size != "" else "",
         'arquitectura': arch,
         'download_os': os
     }
