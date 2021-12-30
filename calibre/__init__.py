@@ -1,7 +1,10 @@
+from cachetools import TTLCache, cached
+
 from utils import download_data
 import feedparser
 
 
+@cached(cache=TTLCache(maxsize=10, ttl=300))
 def get():
 
     feed = feedparser.parse("https://calibre-ebook.com/changelog.rss")

@@ -1,12 +1,14 @@
 import re
 
 import requests
+from cachetools import cached, TTLCache
 
 from utils import download_data
 
 __base_url = 'https://gent.softcatala.org/albert/mapa/'
 
 
+@cached(cache=TTLCache(maxsize=10, ttl=300))
 def get():
     r = requests.get(__base_url)
 

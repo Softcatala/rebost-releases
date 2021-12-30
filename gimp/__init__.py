@@ -1,8 +1,11 @@
+from cachetools import cached, TTLCache
+
 from utils import download_data, get_scoop
 
 scoop_url = 'https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/gimp.json'
 
 
+@cached(cache=TTLCache(maxsize=10, ttl=300))
 def get():
 
     d = get_scoop(scoop_url)
