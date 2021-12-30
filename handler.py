@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 import json
 
+import calibre
 import gimp
 import ubuntu
 import inkscape
@@ -31,6 +32,15 @@ def inkscape_route():
 @app.route("/gimp")
 def gimp_route():
     r = gimp.get()
+    if r is not None:
+        return jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/calibre")
+def calibre_route():
+    r = calibre.get()
     if r is not None:
         return jsonify(r)
     else:
