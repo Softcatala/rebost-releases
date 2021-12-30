@@ -11,6 +11,19 @@ app = Flask(__name__)
 app.config['ENV'] = 'development'
 
 
+@app.route("/")
+def index():
+    return jsonify([
+        {'slug': 'ubuntu', 'path': '/ubuntu/ubuntu'},
+        {'slug': 'xubuntu', 'path': '/ubuntu/xubuntu'},
+        {'slug': 'kubuntu', 'path': '/ubuntu/kubuntu'},
+        {'slug': 'ubuntu-mate', 'path': '/ubuntu/ubuntu-mate'},
+        {'slug': 'inkscape', 'path': '/inkscape'},
+        {'slug': 'gimp', 'path': '/gimp'},
+        {'slug': 'calibre', 'path': '/calibre'},
+    ])
+
+
 @app.route("/ubuntu/<flavor>")
 def ubuntu_route(flavor):
     r = ubuntu.get(flavor)
