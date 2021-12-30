@@ -78,13 +78,11 @@ def __data(flavor, codename, version, v):
             filename, target_hash = i.hash()
             url = "%s/%s" % (i.target.url, filename)
             print(f"Url {url}")
-            r = requests.head(url)
-            size = r.headers["Content-Length"]
 
             return download_data(
                 version=v(version),
                 url=url.replace('http://', 'https://'),
-                size=size,
+                get_size=True,
                 arch='x86_64',
                 os='multiplataforma'
             )

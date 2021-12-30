@@ -1,5 +1,7 @@
-from flask import Flask
+from flask import Flask, jsonify
 import json
+
+import gimp
 import ubuntu
 import inkscape
 
@@ -12,7 +14,7 @@ app.config['ENV'] = 'development'
 def ubuntu_route(flavor):
     r = ubuntu.get(flavor)
     if r is not None:
-        return json.dumps(r, indent=4)
+        return jsonify(r)
     else:
         return "NoData", 404
 
@@ -21,7 +23,16 @@ def ubuntu_route(flavor):
 def inkscape_route():
     r = inkscape.get()
     if r is not None:
-        return json.dumps(r, indent=4)
+        return jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/gimp")
+def gimp_route():
+    r = gimp.get()
+    if r is not None:
+        return jsonify(r)
     else:
         return "NoData", 404
 

@@ -19,17 +19,20 @@ def get():
             version,
             url=f"https://inkscape.org/release/inkscape-{version}/mac-os-x/dmg/dl/",
             os='osx',
+            get_size=True
         ),
         download_data(
             version,
             url=f"https://inkscape.org/release/inkscape-{version}/windows/64-bit/exe/dl/",
             arch='x86_64',
             os='windows',
+            get_size=True
         ),
         download_data(
             version,
             url=f"https://inkscape.org/release/inkscape-{version}/windows/32-bit/exe/dl/",
             arch='x86',
             os='windows',
+            get_size=True
         )
     ]
