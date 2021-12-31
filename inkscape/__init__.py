@@ -1,8 +1,10 @@
 from cachetools import cached, TTLCache
 
-from utils import download_data, get_scoop
+from utils import download_data, get_scoop, add_program
 
 scoop_url = 'https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/inkscape.json'
+
+add_program("inkscape", 'inkscape', 'inkscape')
 
 
 @cached(cache=TTLCache(maxsize=10, ttl=300))

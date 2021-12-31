@@ -64,3 +64,14 @@ __size_units = [
 ]
 
 __base = 1024
+
+
+programs = []
+
+
+def add_program(group, api, wp):
+    programs.append({'wp': wp, 'api': api, 'group': group})
+
+
+def get_all_programs():
+    return programs

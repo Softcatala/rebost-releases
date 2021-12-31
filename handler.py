@@ -3,9 +3,11 @@ import json
 
 import calibre
 import gimp
+import libreoffice
 import osmand
 import ubuntu
 import inkscape
+from utils import get_all_programs
 
 app = Flask(__name__)
 
@@ -14,16 +16,7 @@ app.config['ENV'] = 'development'
 
 @app.route("/")
 def index():
-    return jsonify([
-        {'wp': 'ubuntu', 'api': 'ubuntu/ubuntu'},
-        {'wp': 'xubuntu', 'api': 'ubuntu/xubuntu'},
-        {'wp': 'kubuntu', 'api': 'ubuntu/kubuntu'},
-        {'wp': 'ubuntu-mate', 'api': 'ubuntu/ubuntu-mate'},
-        {'wp': 'inkscape', 'api': 'inkscape'},
-        {'wp': 'gimp', 'api': 'gimp'},
-        {'wp': 'calibre', 'api': 'calibre'},
-        {'wp': 'mapa-catala-per-a-losmand', 'api': 'osmand'},
-    ])
+    return jsonify(get_all_programs())
 
 
 @app.route("/ubuntu/<flavor>")
@@ -65,6 +58,15 @@ def calibre_route():
 @app.route("/osmand")
 def osmand_route():
     r = osmand.get()
+    if r is not None:
+        return jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/libreoffice/<program>")
+def libreoffice_route(program):
+    r = libreoffice.get(program)
     if r is not None:
         return jsonify(r)
     else:

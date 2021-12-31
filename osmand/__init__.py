@@ -3,9 +3,11 @@ import re
 import requests
 from cachetools import cached, TTLCache
 
-from utils import download_data
+from utils import download_data, add_program
 
 __base_url = 'https://gent.softcatala.org/albert/mapa/'
+
+add_program("osmand", 'osmand', 'mapa-catala-per-a-losmand')
 
 
 @cached(cache=TTLCache(maxsize=10, ttl=300))

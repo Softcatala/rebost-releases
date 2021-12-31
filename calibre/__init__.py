@@ -1,7 +1,9 @@
 from cachetools import TTLCache, cached
 
-from utils import download_data
+from utils import download_data, add_program
 import feedparser
+
+add_program("calibre", 'calibre', 'calibre')
 
 
 @cached(cache=TTLCache(maxsize=10, ttl=300))

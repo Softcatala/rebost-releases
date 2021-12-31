@@ -4,7 +4,12 @@ from ubuntu_release_info import data
 from ubuntu_iso_download import iso, url as uurl
 
 from ubuntu.releases import __all
-from utils import download_data
+from utils import download_data, add_program
+
+add_program("ubuntu", 'ubuntu/ubuntu', 'ubuntu')
+add_program("ubuntu", 'ubuntu/xubuntu', 'xubuntu')
+add_program("ubuntu", 'ubuntu/kubuntu', 'kubuntu')
+add_program("ubuntu", 'ubuntu/ubuntu-mate', 'ubuntu-mate')
 
 
 @cached(cache=TTLCache(maxsize=10, ttl=300))
