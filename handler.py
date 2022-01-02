@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 
 import calibre
+import tor
 from kde import digikam, krita, kdenlive, gcompris
 import gimp
 import libreoffice
@@ -122,6 +123,15 @@ def gcompris_route():
 @app.route("/transmission")
 def transmission_route():
     r = transmission.get()
+    if r is not None:
+        return __jsonfiy(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/tor")
+def tor_route():
+    r = tor.get()
     if r is not None:
         return __jsonfiy(r)
     else:
