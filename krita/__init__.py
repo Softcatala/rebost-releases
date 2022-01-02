@@ -32,5 +32,11 @@ def get():
             url=f"https://download.kde.org/stable/krita/{version}/krita-x64-{version}-setup.exe",
             arch='x86_64',
             os='windows'
+        ),
+        download_data(
+            version,
+            url=f"https://play.google.com/store/apps/details?id=org.krita",
+            arch='generic',
+            os='android'
         )
     ]
