@@ -89,7 +89,7 @@ def __data(flavor, codename, version, v):
                 url=url.replace('http://', 'https://'),
                 get_size=True,
                 arch='x86_64',
-                os='multiplataforma'
+                os='linux'
             )
     except Exception as e:
         print(e)
