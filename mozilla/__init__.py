@@ -190,7 +190,7 @@ def __firefox(lang):
         download_data(
             version=version,
             arch='generic',
-            os='windows',
+            os='ios',
             url='https://itunes.apple.com/app/apple-store/id989804926'
         ),
     ]
