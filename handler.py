@@ -19,14 +19,14 @@ app.config['ENV'] = 'development'
 
 @app.route("/")
 def index():
-    return __jsonfiy(get_all_programs())
+    return jsonify(get_all_programs())
 
 
 @app.route("/ubuntu/<flavor>")
 def ubuntu_route(flavor):
     r = ubuntu.get(flavor)
     if r is not None:
-        return __jsonfiy(r)
+        return __jsonify(r)
     else:
         return "NoData", 404
 
@@ -35,7 +35,7 @@ def ubuntu_route(flavor):
 def inkscape_route():
     r = inkscape.get()
     if r is not None:
-        return __jsonfiy(r)
+        return __jsonify(r)
     else:
         return "NoData", 404
 
@@ -44,7 +44,7 @@ def inkscape_route():
 def gimp_route():
     r = gimp.get()
     if r is not None:
-        return __jsonfiy(r)
+        return __jsonify(r)
     else:
         return "NoData", 404
 
@@ -53,7 +53,7 @@ def gimp_route():
 def calibre_route():
     r = calibre.get()
     if r is not None:
-        return __jsonfiy(r)
+        return __jsonify(r)
     else:
         return "NoData", 404
 
@@ -62,7 +62,7 @@ def calibre_route():
 def osmand_route():
     r = osmand.get()
     if r is not None:
-        return __jsonfiy(r)
+        return __jsonify(r)
     else:
         return "NoData", 404
 
@@ -71,7 +71,7 @@ def osmand_route():
 def libreoffice_route(program):
     r = libreoffice.get(program)
     if r is not None:
-        return __jsonfiy(r)
+        return __jsonify(r)
     else:
         return "NoData", 404
 
@@ -80,7 +80,7 @@ def libreoffice_route(program):
 def mozilla_route(program):
     r = mozilla.get(program)
     if r is not None:
-        return __jsonfiy(r)
+        return __jsonify(r)
     else:
         return "NoData", 404
 
@@ -89,7 +89,7 @@ def mozilla_route(program):
 def digikam_route():
     r = digikam.get()
     if r is not None:
-        return __jsonfiy(r)
+        return __jsonify(r)
     else:
         return "NoData", 404
 
@@ -98,7 +98,7 @@ def digikam_route():
 def krita_route():
     r = krita.get()
     if r is not None:
-        return __jsonfiy(r)
+        return __jsonify(r)
     else:
         return "NoData", 404
 
@@ -107,7 +107,7 @@ def krita_route():
 def kdenlive_route():
     r = kdenlive.get()
     if r is not None:
-        return __jsonfiy(r)
+        return __jsonify(r)
     else:
         return "NoData", 404
 
@@ -115,7 +115,7 @@ def kdenlive_route():
 def gcompris_route():
     r = gcompris.get()
     if r is not None:
-        return __jsonfiy(r)
+        return __jsonify(r)
     else:
         return "NoData", 404
 
@@ -124,7 +124,7 @@ def gcompris_route():
 def transmission_route():
     r = transmission.get()
     if r is not None:
-        return __jsonfiy(r)
+        return __jsonify(r)
     else:
         return "NoData", 404
 
@@ -133,12 +133,12 @@ def transmission_route():
 def tor_route():
     r = tor.get()
     if r is not None:
-        return __jsonfiy(r)
+        return __jsonify(r)
     else:
         return "NoData", 404
 
 
-def __jsonfiy(r):
+def __jsonify(r):
     r = sorted(r, key=lambda x: x['download_os'], reverse=True)
     return jsonify(r)
 
