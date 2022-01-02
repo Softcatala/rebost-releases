@@ -4,6 +4,7 @@ import json
 import calibre
 import gimp
 import libreoffice
+import mozilla
 import osmand
 import ubuntu
 import inkscape
@@ -67,6 +68,15 @@ def osmand_route():
 @app.route("/libreoffice/<program>")
 def libreoffice_route(program):
     r = libreoffice.get(program)
+    if r is not None:
+        return jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/mozilla/<program>")
+def mozilla_route(program):
+    r = mozilla.get(program)
     if r is not None:
         return jsonify(r)
     else:

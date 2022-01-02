@@ -107,7 +107,6 @@ __programs = {
     'helppack-ca-valencia': __help_pack_valencia,
     'langpack-ca': __lang_pack,
     'langpack-ca-valencia': __lang_pack_valencia,
-
 }
 
 add_program("libreoffice", 'libreoffice/libreoffice', 'libreoffice')
