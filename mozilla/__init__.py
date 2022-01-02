@@ -32,6 +32,7 @@ def __firefox_valencia():
 def __firefox_langpack_catala():
     return [
         download_data(
+            version='',
             get_size=True,
             arch='generic',
             os='multiplataforma',
@@ -43,6 +44,7 @@ def __firefox_langpack_catala():
 def __firefox_langpack_valencia():
     return [
         download_data(
+            version='',
             get_size=True,
             arch='generic',
             os='multiplataforma',
@@ -54,6 +56,7 @@ def __firefox_langpack_valencia():
 def __dict_ca():
     return [
         download_data(
+            version='',
             get_size=True,
             arch='generic',
             os='multiplataforma',
@@ -65,6 +68,7 @@ def __dict_ca():
 def __dict_ca_valencia():
     return [
         download_data(
+            version='',
             get_size=True,
             arch='generic',
             os='multiplataforma',
@@ -76,6 +80,7 @@ def __dict_ca_valencia():
 def __thunderbird_langpack_catala():
     return [
         download_data(
+            version='',
             get_size=True,
             arch='generic',
             os='multiplataforma',
@@ -105,35 +110,35 @@ def __thunderbird():
             get_size=True,
             arch='x86',
             os='windows',
-            url=__get_url('firefox', version, 'win', 'ca')
+            url=__get_url('thunderbird', version, 'win', 'ca')
         ),
         download_data(
             version=version,
             get_size=True,
             arch='x86_64',
             os='windows',
-            url=__get_url('firefox', version, 'win64', 'ca')
+            url=__get_url('thunderbird', version, 'win64', 'ca')
         ),
         download_data(
             version=version,
             get_size=True,
             arch='generic',
             os='osx',
-            url=__get_url('firefox', version, 'osx', 'ca')
+            url=__get_url('thunderbird', version, 'osx', 'ca')
         ),
         download_data(
             version=version,
             get_size=True,
             arch='x86',
             os='linux',
-            url=__get_url('firefox', version, 'linux', 'ca')
+            url=__get_url('thunderbird', version, 'linux', 'ca')
         ),
         download_data(
             version=version,
             get_size=True,
             arch='x86',
             os='linux_64',
-            url=__get_url('firefox', version, 'linux64', 'ca')
+            url=__get_url('thunderbird', version, 'linux64', 'ca')
         ),
     ]
 
@@ -204,7 +209,7 @@ __programs = {
     'dict-ca': __dict_ca,
     'dict-ca-valencia': __dict_ca_valencia,
     'thunderbird': __thunderbird,
-    'thunderbird-langpack-valencia': __thunderbird_langpack_catala,
+    'thunderbird-langpack-ca': __thunderbird_langpack_catala,
     'thunderbird-langpack-ca-valencia': __thunderbird_langpack_valencia,
 }
 
