@@ -10,15 +10,15 @@ def get(program):
         return __programs[program]()
 
 
-add_program('mozilla', 'firefox', 'firefox')
-add_program('mozilla', 'firefox-valencia', 'firefox-en-valencia')
-add_program('mozilla', 'firefox-langpack-ca', 'paquet-catala-per-al-firefox')
-add_program('mozilla', 'firefox-langpack-ca-valencia', 'paquet-catala-valencia-per-al-firefox')
-add_program('mozilla', 'dict-ca', 'diccionari-catala-firefox')
-add_program('mozilla', 'dict-ca-valencia', 'diccionari-valencia-firefox')
-add_program('mozilla', 'thunderbird', 'thunderbird')
-add_program('mozilla', 'thunderbird-langpack-ca', 'paquet-catala-per-al-thunderbird')
-add_program('mozilla', 'thunderbird-langpack-ca-valencia', 'paquet-catala-valencia-per-al-thunderbird')
+add_program('mozilla', 'mozilla/firefox', 'firefox')
+add_program('mozilla', 'mozilla/firefox-valencia', 'firefox-en-valencia')
+add_program('mozilla', 'mozilla/firefox-langpack-ca', 'paquet-catala-per-al-firefox')
+add_program('mozilla', 'mozilla/firefox-langpack-ca-valencia', 'paquet-catala-valencia-per-al-firefox')
+add_program('mozilla', 'mozilla/dict-ca', 'diccionari-catala-firefox')
+add_program('mozilla', 'mozilla/dict-ca-valencia', 'diccionari-valencia-firefox')
+add_program('mozilla', 'mozilla/thunderbird', 'thunderbird')
+add_program('mozilla', 'mozilla/thunderbird-langpack-ca', 'paquet-catala-per-al-thunderbird')
+add_program('mozilla', 'mozilla/thunderbird-langpack-ca-valencia', 'paquet-catala-valencia-per-al-thunderbird')
 
 
 def __firefox_catala():
