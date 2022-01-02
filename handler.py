@@ -3,6 +3,7 @@ from flask import Flask, jsonify
 import calibre
 import digikam
 import gimp
+import krita
 import libreoffice
 import mozilla
 import osmand
@@ -87,6 +88,15 @@ def mozilla_route(program):
 @app.route("/digikam")
 def digikam_route():
     r = digikam.get()
+    if r is not None:
+        return jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/krita")
+def krita_route():
+    r = krita.get()
     if r is not None:
         return jsonify(r)
     else:
