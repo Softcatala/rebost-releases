@@ -30,7 +30,6 @@ def get():
             version,
             get_size=True,
             url=f"https://download.kde.org/stable/krita/{version}/krita-x64-{version}-setup.exe",
-            arch='x86_64',
             os='windows'
         ),
         download_data(
