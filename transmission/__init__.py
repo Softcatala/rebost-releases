@@ -21,17 +21,20 @@ def get():
         ),
         download_data(
             version,
+            get_size=True,
             url=f"https://github.com/transmission/transmission-releases/raw/master/Transmission-{version}.dmg",
             os='osx'
         ),
         download_data(
             version,
+            get_size=True,
             url=f"https://github.com/transmission/transmission-releases/raw/master/transmission-{version}-x64.msi",
             arch='x86_64',
             os='windows'
         ),
         download_data(
             version,
+            get_size=True,
             url=f"https://github.com/transmission/transmission-releases/raw/master/transmission-{version}-x86.msi",
             arch='x86',
             os='windows'
