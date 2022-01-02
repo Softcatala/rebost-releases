@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
 
 import calibre
-from kde import digikam, krita, kdenlive
+from kde import digikam, krita, kdenlive, gcompris
 import gimp
 import libreoffice
 import mozilla
@@ -105,6 +105,14 @@ def krita_route():
 @app.route("/kdenlive")
 def kdenlive_route():
     r = kdenlive.get()
+    if r is not None:
+        return __jsonfiy(r)
+    else:
+        return "NoData", 404
+
+@app.route("/gcompris")
+def gcompris_route():
+    r = gcompris.get()
     if r is not None:
         return __jsonfiy(r)
     else:

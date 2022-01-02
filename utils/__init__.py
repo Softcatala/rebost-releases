@@ -1,4 +1,6 @@
 import math
+
+import feedparser
 import requests
 
 
@@ -23,6 +25,28 @@ def get_scoop(url):
         js['patchVersion'] = parts[2]
 
     return js
+
+
+def get_gitlab_tag_rss(url, filter):
+    feed = feedparser.parse(url)
+
+    title = feed.entries[0].title
+
+    version = {}
+    if filter:
+        version['version'] = title.replace(filter, '')
+    else:
+        version['version'] = title
+
+    parts = version['version'].split('.')
+
+    version['majorVersion'] = parts[0]
+    if len(parts) > 1:
+        version['minorVersion'] = parts[1]
+    if len(parts) > 2:
+        version['patchVersion'] = parts[2]
+
+    return version
 
 
 def download_data(version, url, size="", arch="generic", os="multiplataforma", get_size=False, human_size=""):
