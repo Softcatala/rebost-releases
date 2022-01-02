@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 import json
 
 import calibre
+import digikam
 import gimp
 import libreoffice
 import mozilla
@@ -83,6 +84,13 @@ def mozilla_route(program):
         return "NoData", 404
 
 
+@app.route("/digikam")
+def digikam_route():
+    r = digikam.get()
+    if r is not None:
+        return jsonify(r)
+    else:
+        return "NoData", 404
 
 
 app.run(host="0.0.0.0")
