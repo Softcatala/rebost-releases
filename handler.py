@@ -1,5 +1,4 @@
 from flask import Flask, jsonify
-import json
 
 import calibre
 import digikam
@@ -7,6 +6,7 @@ import gimp
 import libreoffice
 import mozilla
 import osmand
+import transmission
 import ubuntu
 import inkscape
 from utils import get_all_programs
@@ -87,6 +87,15 @@ def mozilla_route(program):
 @app.route("/digikam")
 def digikam_route():
     r = digikam.get()
+    if r is not None:
+        return jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/transmission")
+def transmission_route():
+    r = transmission.get()
     if r is not None:
         return jsonify(r)
     else:
