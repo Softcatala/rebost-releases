@@ -1,11 +1,11 @@
 import requests
 from cachetools import cached, TTLCache
 
-from utils import download_data, get_scoop, add_program
+from utils import download_data, add_program
 
 url = 'https://aus1.torproject.org/torbrowser/update_3/release/downloads.json'
 
-add_program("tor", 'tor', 'tor')
+add_program("tor", 'tor', 'navegador-tor')
 
 
 @cached(cache=TTLCache(maxsize=10, ttl=300))
