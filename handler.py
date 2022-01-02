@@ -1,9 +1,8 @@
 from flask import Flask, jsonify
 
 import calibre
-import digikam
+from kde import digikam, krita, kdenlive
 import gimp
-import krita
 import libreoffice
 import mozilla
 import osmand
@@ -97,6 +96,14 @@ def digikam_route():
 @app.route("/krita")
 def krita_route():
     r = krita.get()
+    if r is not None:
+        return jsonify(r)
+    else:
+        return "NoData", 404
+
+@app.route("/kdenlive")
+def kdenlive_route():
+    r = kdenlive.get()
     if r is not None:
         return jsonify(r)
     else:
