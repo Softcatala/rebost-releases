@@ -31,14 +31,14 @@ def get():
         download_data(
             version,
             get_size=True,
-            platform='x86_64',
+            arch='x86_64',
             url=f"https://gcompris.net/download/qt/windows/gcompris-qt-{version}-win64-gcc.exe",
             os='windows'
         ),
         download_data(
             version,
             get_size=True,
-            platform='x86',
+            arch='x86',
             url=f"https://gcompris.net/download/qt/windows/gcompris-qt-{version}-win32-gcc.exe",
             os='windows'
         ),
