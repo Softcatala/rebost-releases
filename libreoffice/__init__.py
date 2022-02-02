@@ -2,7 +2,7 @@ from cachetools import cached, TTLCache
 
 from utils import add_program, get_scoop, download_data
 
-scoop_url = 'https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/libreoffice-fresh.json'
+scoop_url = 'https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/libreoffice.json'
 
 
 @cached(cache=TTLCache(maxsize=10, ttl=300))
@@ -21,21 +21,21 @@ def __libreoffice():
             get_size=True,
             os='windows',
             arch='x86',
-            url=__get_download_url(d['version'], 'win', 'x86')
+            url=__get_download_url(d['version'], 'win', 'x86', f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}")
         ),
         download_data(
             version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
             get_size=True,
             os='windows',
             arch='x86_64',
-            url=__get_download_url(d['version'], 'win', 'x86_64')
+            url=__get_download_url(d['version'], 'win', 'x86_64', f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}")
         ),
         download_data(
             version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
             get_size=True,
             os='osx',
             arch='x86_64',
-            url=__get_download_url(d['version'], 'mac', 'x86_64')
+            url=__get_download_url(d['version'], 'mac', 'x86_64', f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}")
         ),
         download_data(
             version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
@@ -55,14 +55,14 @@ def __help_pack(package="helppack", lang="ca"):
             get_size=True,
             os='windows',
             arch='x86',
-            url=__get_download_url(d['version'], 'win', 'x86', f"{package}_{lang}")
+            url=__get_download_url(d['version'], 'win', 'x86', f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}" f"{package}_{lang}")
         ),
         download_data(
             version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
             get_size=True,
             os='windows',
             arch='x86_64',
-            url=__get_download_url(d['version'], 'win', 'x86_64', f"{package}_{lang}")
+            url=__get_download_url(d['version'], 'win', 'x86_64', f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}", f"{package}_{lang}")
         ),
         download_data(
             version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
@@ -86,7 +86,7 @@ def __lang_pack(package="langpack", lang="ca"):
             get_size=True,
             os='osx',
             arch='x86_64',
-            url=__get_download_url(d['version'], 'mac', 'x86_64', f"{package}_{lang}")
+            url=__get_download_url(d['version'], 'mac', 'x86_64', f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}", f"{package}_{lang}")
         ),
         download_data(
             version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
@@ -138,9 +138,9 @@ __extension = {
 }
 
 
-def __get_download_url(version, os, arch, package=""):
+def __get_download_url(version, os, arch, shortversion, package=""):
     base = 'https://downloadarchive.documentfoundation.org/libreoffice/old'
 
     package = f'_{package}' if package != "" else ""
 
-    return f'{base}/{version}/{os}/{arch}/LibreOffice_{version}{__platform_suffix[os]}{__arch_suffix[os][arch]}{package}.{__extension[os]}'
+    return f'{base}/{version}/{os}/{arch}/LibreOffice_{shortversion}{__platform_suffix[os]}{__arch_suffix[os][arch]}{package}.{__extension[os]}'
