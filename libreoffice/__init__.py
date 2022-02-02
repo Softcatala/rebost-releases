@@ -7,8 +7,9 @@ scoop_url = 'https://raw.githubusercontent.com/ScoopInstaller/Extras/master/buck
 
 @cached(cache=TTLCache(maxsize=10, ttl=300))
 def get(program):
-    if program in __programs:
-        return __programs[program]()
+    pass
+    # if program in __programs:
+    #    return __programs[program]()
 
 
 def __libreoffice():
