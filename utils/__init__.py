@@ -1,13 +1,48 @@
 import math
+from typing import Dict
 
 import feedparser
 import requests
 
+import re
 
 def get_content_size(url):
     r = requests.head(url,allow_redirects=True)
     return r.headers["Content-Length"]
 
+
+def get_debian_package(package):
+    url = f'https://sources.debian.org/api/src/{package}/'
+
+    r = requests.get(url)
+
+    js = r.json()
+
+    versions = js['versions']
+
+    sid = [v for v in versions if 'sid' in v['suites']]
+
+    if not sid:
+        return
+
+    latest = sid[0]['version']
+
+    m = re.search(':(.+?)-', latest)
+
+    if m:
+        version = m.group(1)
+
+        parts = version.split('.')
+
+        js = {}
+        js['version'] = version
+        js['majorVersion'] = parts[0]
+        if len(parts) > 1:
+            js['minorVersion'] = parts[1]
+        if len(parts) > 2:
+            js['patchVersion'] = parts[2]
+
+        return js
 
 def get_scoop(url):
     r = requests.get(url)

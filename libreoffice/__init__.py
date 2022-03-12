@@ -1,20 +1,15 @@
 from cachetools import cached, TTLCache
 
-from utils import add_program, get_scoop, download_data
-
-scoop_url = 'https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/libreoffice.json'
-
+from utils import add_program, get_debian_package, download_data
 
 @cached(cache=TTLCache(maxsize=10, ttl=300))
 def get(program):
-    pass
-    # if program in __programs:
-    #    return __programs[program]()
+    if program in __programs:
+       return __programs[program]()
 
 
 def __libreoffice():
-
-    d = get_scoop(scoop_url)
+    d = get_debian_package('libreoffice')
 
     return [
         download_data(
@@ -48,7 +43,8 @@ def __libreoffice():
 
 
 def __help_pack(package="helppack", lang="ca"):
-    d = get_scoop(scoop_url)
+    d = get_debian_package('libreoffice')
+
 
     return [
         download_data(
@@ -56,7 +52,7 @@ def __help_pack(package="helppack", lang="ca"):
             get_size=True,
             os='windows',
             arch='x86',
-            url=__get_download_url(d['version'], 'win', 'x86', f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}" f"{package}_{lang}")
+            url=__get_download_url(d['version'], 'win', 'x86', f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}", f"{package}_{lang}")
         ),
         download_data(
             version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
@@ -79,7 +75,7 @@ def __help_pack_valencia():
 
 
 def __lang_pack(package="langpack", lang="ca"):
-    d = get_scoop(scoop_url)
+    d = get_debian_package('libreoffice')
 
     return [
         download_data(
@@ -140,8 +136,8 @@ __extension = {
 
 
 def __get_download_url(version, os, arch, shortversion, package=""):
-    base = 'https://downloadarchive.documentfoundation.org/libreoffice/old'
+    base = f'https://download.documentfoundation.org/libreoffice/stable'
 
     package = f'_{package}' if package != "" else ""
 
-    return f'{base}/{version}/{os}/{arch}/LibreOffice_{shortversion}{__platform_suffix[os]}{__arch_suffix[os][arch]}{package}.{__extension[os]}'
+    return f'{base}/{shortversion}/{os}/{arch}/LibreOffice_{shortversion}{__platform_suffix[os]}{__arch_suffix[os][arch]}{package}.{__extension[os]}'
