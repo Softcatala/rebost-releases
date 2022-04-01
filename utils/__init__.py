@@ -25,7 +25,8 @@ def get_debian_package(package):
     if not sid:
         return
 
-    latest = sid[0]['version']
+    item = next(v for v in sid if '~' not in v['version'])
+    latest = item['version']
 
     m = re.search(':(.+?)-', latest)
 
