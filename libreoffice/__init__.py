@@ -1,6 +1,6 @@
 from cachetools import cached, TTLCache
 
-from utils import add_program, get_debian_package, download_data
+from utils import add_program, download_data
 
 @cached(cache=TTLCache(maxsize=10, ttl=300))
 def get(program):
@@ -9,7 +9,7 @@ def get(program):
 
 
 def __libreoffice():
-    d = get_debian_package('libreoffice')
+    d = __get_latest_version()
 
     return [
         download_data(
@@ -141,3 +141,28 @@ def __get_download_url(version, os, arch, shortversion, package=""):
     package = f'_{package}' if package != "" else ""
 
     return f'{base}/{shortversion}/{os}/{arch}/LibreOffice_{shortversion}{__platform_suffix[os]}{__arch_suffix[os][arch]}{package}.{__extension[os]}'
+
+
+def __get_latest_version():
+    url = 'https://downloadarchive.documentfoundation.org/libreoffice/old/latest/win/x86/'
+
+    r = requests.get(url)
+
+    body = r.text
+
+    exp = re.search('href="LibreOffice_([\d\.]+)_Win_x86.msi"', '', body).groups()
+
+    if exp:
+        version = exp[0]
+
+        parts = version.split('.')
+
+        js = {}
+        js['version'] = version
+        js['majorVersion'] = parts[0]
+        if len(parts) > 1:
+            js['minorVersion'] = parts[1]
+        if len(parts) > 2:
+            js['patchVersion'] = parts[2]
+
+        return js
