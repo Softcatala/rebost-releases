@@ -1,3 +1,5 @@
+import requests
+
 from cachetools import cached, TTLCache
 
 from utils import add_program, download_data
