@@ -152,19 +152,22 @@ def __get_latest_version():
 
     body = r.text
 
-    exp = re.search('href="LibreOffice_([\d\.]+)_Win_x86.msi"', '', body).groups()
+    exp = re.search('href="LibreOffice_([\d\.]+)_Win_x86.msi"', body)
 
     if exp:
-        version = exp[0]
+        g = exp.groups()
 
-        parts = version.split('.')
+        if g:
+            version = g[0]
 
-        js = {}
-        js['version'] = version
-        js['majorVersion'] = parts[0]
-        if len(parts) > 1:
-            js['minorVersion'] = parts[1]
-        if len(parts) > 2:
-            js['patchVersion'] = parts[2]
+            parts = version.split('.')
 
-        return js
+            js = {}
+            js['version'] = version
+            js['majorVersion'] = parts[0]
+            if len(parts) > 1:
+                js['minorVersion'] = parts[1]
+            if len(parts) > 2:
+                js['patchVersion'] = parts[2]
+
+            return js
