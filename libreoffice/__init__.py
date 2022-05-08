@@ -138,11 +138,11 @@ __extension = {
 
 
 def __get_download_url(version, os, arch, shortversion, package=""):
-    base = f'https://download.documentfoundation.org/libreoffice/stable'
+    base = 'https://downloadarchive.documentfoundation.org/libreoffice/old/'
 
     package = f'_{package}' if package != "" else ""
 
-    return f'{base}/{shortversion}/{os}/{arch}/LibreOffice_{shortversion}{__platform_suffix[os]}{__arch_suffix[os][arch]}{package}.{__extension[os]}'
+    return f'{base}/{version}/{os}/{arch}/LibreOffice_{version}{__platform_suffix[os]}{__arch_suffix[os][arch]}{package}.{__extension[os]}'
 
 
 def __get_latest_version():
