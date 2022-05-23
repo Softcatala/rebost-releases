@@ -45,7 +45,7 @@ def __libreoffice():
 
 
 def __help_pack(package="helppack", lang="ca"):
-    d = get_debian_package('libreoffice')
+    d = __get_latest_version()
 
 
     return [
@@ -77,7 +77,7 @@ def __help_pack_valencia():
 
 
 def __lang_pack(package="langpack", lang="ca"):
-    d = get_debian_package('libreoffice')
+    d = __get_latest_version()
 
     return [
         download_data(
