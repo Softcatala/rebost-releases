@@ -1,9 +1,11 @@
 import requests
 from cachetools import TTLCache, cached
 
-from utils import download_data, get_scoop
+from utils import download_data, get_scoop, add_program
 
 scoop_url = 'https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/notepadplusplus.json'
+
+add_program("notepadplusplus", 'notepadplusplus', 'notepad')
 
 
 @cached(cache=TTLCache(maxsize=10, ttl=300))
