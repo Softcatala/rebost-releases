@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 
 import calibre
+import notepadplusplus
 import tor
 from kde import digikam, krita, kdenlive, gcompris
 import gimp
@@ -132,6 +133,14 @@ def transmission_route():
 @app.route("/tor")
 def tor_route():
     r = tor.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+@app.route("/notepadplusplus")
+def notepadplusplus_route():
+    r = notepadplusplus.get()
     if r is not None:
         return __jsonify(r)
     else:
