@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 
 import calibre
 import notepadplusplus
+import sevenzip
 import tor
 from kde import digikam, krita, kdenlive, gcompris
 import gimp
@@ -138,9 +139,19 @@ def tor_route():
     else:
         return "NoData", 404
 
+
 @app.route("/notepadplusplus")
 def notepadplusplus_route():
     r = notepadplusplus.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/7zip")
+def sevenzip_route():
+    r = sevenzip.get()
     if r is not None:
         return __jsonify(r)
     else:
