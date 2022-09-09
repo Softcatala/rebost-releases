@@ -16,6 +16,15 @@ def get():
     major_version = d['majorVersion']
     minor_version = d['minorVersion']
 
+    if "-" in version:
+        winversion = version.replace('-', '-setup-')
+        macversion = f"{version.split('-')[0]}-x86_64"
+
+    else:
+        winversion = f"{version}-setup"
+        macversion = f"{version}-x86_64"
+
+
     return [
         download_data(
             version,
@@ -24,13 +33,13 @@ def get():
         ),
         download_data(
             version,
-            url=f"https://download.gimp.org/mirror/pub/gimp/v{major_version}.{minor_version}/osx/gimp-{version}-x86_64.dmg",
+            url=f"https://download.gimp.org/mirror/pub/gimp/v{major_version}.{minor_version}/osx/gimp-{macversion}.dmg",
             os='osx',
             get_size=True
         ),
         download_data(
             version,
-            url=f"https://download.gimp.org/mirror/pub/gimp/v{major_version}.{minor_version}/windows/gimp-{version}-setup.exe",
+            url=f"https://download.gimp.org/mirror/pub/gimp/v{major_version}.{minor_version}/windows/gimp-{winversion}.exe",
             arch='x86_64',
             os='windows',
             get_size=True
