@@ -118,7 +118,7 @@ add_program("libreoffice", 'libreoffice/langpack-ca-valencia', 'paquet-catala-va
 __arch_suffix = {
     'win' : {
         'x86': '_x86',
-        'x86_64': '_x64'
+        'x86_64': '_x86-64'
     },
     'mac' : {
         'x86': '_x86',
