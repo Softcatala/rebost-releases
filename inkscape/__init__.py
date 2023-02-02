@@ -12,7 +12,7 @@ def get():
 
     d = get_scoop(scoop_url)
 
-    version = d['version']
+    version = d['version'].split('_')[0]
 
     return [
         download_data(
@@ -24,6 +24,12 @@ def get():
             version,
             url=f"https://inkscape.org/release/inkscape-{version}/mac-os-x/dmg/dl/",
             os='osx'
+        ),
+        download_data(
+            version,
+            url=f"https://inkscape.org/release/inkscape-{version}/mac-os-x/dmg/dl/",
+            os='osx',
+            arch='arm'
         ),
         download_data(
             version,
