@@ -17,14 +17,14 @@ def get():
     return [
         download_data(
             version,
-            url=d['downloads']['linux64']['ca']['binary'],
+            url=d['downloads']['linux64']['ALL']['binary'],
             get_size=True,
             arch="x86_64",
             os='linux',
         ),
         download_data(
             version,
-            url=d['downloads']['linux32']['ca']['binary'],
+            url=d['downloads']['linux32']['ALL']['binary'],
             get_size=True,
             arch="x86",
             os='linux',
@@ -32,20 +32,20 @@ def get():
 
         download_data(
             version,
-            url=d['downloads']['osx64']['ca']['binary'],
+            url=d['downloads']['osx64']['ALL']['binary'],
             get_size=True,
             os='osx'
         ),
         download_data(
             version,
-            url=d['downloads']['win64']['ca']['binary'],
+            url=d['downloads']['win64']['ALL']['binary'],
             get_size=True,
             arch="x86_64",
             os='windows'
         ),
         download_data(
             version,
-            url=d['downloads']['win32']['ca']['binary'],
+            url=d['downloads']['win32']['ALL']['binary'],
             get_size=True,
             arch="x86",
             os='windows'
