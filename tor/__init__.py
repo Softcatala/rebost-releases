@@ -32,7 +32,7 @@ def get():
 
         download_data(
             version,
-            url=d['downloads']['osx64']['ALL']['binary'],
+            url=d['downloads']['macos']['ALL']['binary'],
             get_size=True,
             os='osx'
         ),
