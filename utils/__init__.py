@@ -135,3 +135,13 @@ def add_program(group, api, wp):
 
 def get_all_programs():
     return programs
+
+
+def get_eol_date(program):
+    url = f'https://endoflife.date/api/{program}.json'
+
+    r = requests.get(url)
+
+    js = r.json()
+
+    return js[0]

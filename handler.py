@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 
 import calibre
+import debian
 import notepadplusplus
 import sevenzip
 import tor
@@ -152,6 +153,15 @@ def notepadplusplus_route():
 @app.route("/7zip")
 def sevenzip_route():
     r = sevenzip.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/debian")
+def debian_route():
+    r = debian.get()
     if r is not None:
         return __jsonify(r)
     else:
