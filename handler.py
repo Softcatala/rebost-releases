@@ -4,6 +4,7 @@ import calibre
 import debian
 import fedora
 import notepadplusplus
+import opensuse
 import sevenzip
 import tor
 from kde import digikam, krita, kdenlive, gcompris
@@ -173,6 +174,15 @@ def debian_route():
 @app.route("/fedora")
 def fedora_route():
     r = fedora.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/opensuse")
+def opensuse_route():
+    r = opensuse.get()
     if r is not None:
         return __jsonify(r)
     else:

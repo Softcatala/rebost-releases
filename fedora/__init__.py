@@ -15,7 +15,7 @@ def get():
 
     return [
         download_data(
-            f'Fedora {version} - Live ISO',
+            version,
             url=d['link'],
             os='linux',
             get_size=True
