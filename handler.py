@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 
 import calibre
 import debian
+import fedora
 import notepadplusplus
 import sevenzip
 import tor
@@ -162,6 +163,16 @@ def sevenzip_route():
 @app.route("/debian")
 def debian_route():
     r = debian.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+
+@app.route("/fedora")
+def fedora_route():
+    r = fedora.get()
     if r is not None:
         return __jsonify(r)
     else:
