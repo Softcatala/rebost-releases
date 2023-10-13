@@ -170,7 +170,6 @@ def debian_route():
         return "NoData", 404
 
 
-
 @app.route("/fedora")
 def fedora_route():
     r = fedora.get()
@@ -187,6 +186,7 @@ def opensuse_route():
         return __jsonify(r)
     else:
         return "NoData", 404
+
 
 
 def __jsonify(r):
