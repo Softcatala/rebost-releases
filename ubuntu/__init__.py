@@ -1,9 +1,6 @@
-import requests
 from cachetools import cached, TTLCache
-from ubuntu_release_info import data
-from ubuntu_iso_download import iso, url as uurl
 
-from ubuntu.releases import __all
+from ubuntu import iso, releases
 from utils import download_data, add_program
 
 add_program("ubuntu", 'ubuntu/ubuntu', 'ubuntu')
@@ -19,77 +16,65 @@ def get(flavor):
             return __desktop()
         else:
             return __other(flavor)
-    except:
-        pass
+    except Exception as e:
+        print(e)
 
     return None
 
 
-flavors = {
-    "desktop": uurl.Desktop,
-    "server": uurl.Server,
-    "netboot": uurl.Netboot,
-    "budgie": uurl.Budgie,
-    "kubuntu": uurl.Kubuntu,
-    "kylin": uurl.Kylin,
-    "lubuntu": uurl.Lubuntu,
-    "ubuntu-mate": uurl.Mate,
-    "studio": uurl.Studio,
-    "xubuntu": uurl.Xubuntu,
-}
+def __desktop():
+    stable = releases.stable()
+    lts = releases.lts()
+
+    found = [__data('desktop', stable)]
+
+    # the newest supported release is often the LTS itself, and there is no
+    # point in offering the very same download twice
+    if lts and lts['codename'] != stable['codename']:
+        found.append(__data('desktop', lts))
+
+    return [f for f in found if f is not None]
 
 
 def __other(flavor):
-
-    if flavor not in flavors:
+    if flavor not in iso.flavors:
         return None
 
-    f = flavors[flavor]
-
-    for r in __all():
+    # a flavor does not publish an image for every release, so walk the
+    # supported ones from the newest down until one of them has an ISO
+    for r in releases.supported():
         if not r['dev']:
-            x = __data(f, r['codename'], r['version'], __lts_version if r['lts'] else __stable_version)
-            if x is not None:
-                return [x]
+            d = __data(flavor, r)
+
+            if d is not None:
+                return [d]
 
 
-def __desktop():
-    d = data.Data()
+def __data(flavor, release):
+    if release is None:
+        return None
 
-    stable = d.stable
-    lts = d.lts
-
-    return [
-        __data(uurl.Desktop, stable.codename, stable.version, __stable_version),
-        __data(uurl.Desktop, lts.codename, lts.version, __lts_version)
-    ]
-
-
-def __stable_version(v):
-    return v
-
-
-def __lts_version(v):
-    return f"LTS ({v})"
-
-
-def __data(flavor, codename, version, v):
     try:
-        i = iso.ISO(flavor, codename, "")
-
-        hashes = requests.get(i.target.hash_file).content
-        if i.verify_gpg_signature(hashes, i.target.hash_file_signed):
-            print(f"Getting {codename} {version}")
-            filename, target_hash = i.hash()
-            url = "%s/%s" % (i.target.url, filename)
-            print(f"Url {url}")
-
-            return download_data(
-                version=v(version),
-                url=url.replace('http://', 'https://'),
-                get_size=True,
-                arch='x86_64',
-                os='linux'
-            )
+        found = iso.get(flavor, release)
     except Exception as e:
+        # a flavor that has not published this release yet just 404s, and the
+        # caller is expected to fall back to an older one
         print(e)
+        return None
+
+    if found is None:
+        return None
+
+    print(f"Got {flavor} {release['codename']} at {found['url']}")
+
+    return download_data(
+        version=__version(found['version'], release['lts']),
+        url=found['url'],
+        size=found['size'],
+        arch='x86_64',
+        os='linux'
+    )
+
+
+def __version(version, lts):
+    return f"LTS ({version})" if lts else version

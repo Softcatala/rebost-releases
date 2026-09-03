@@ -7,10 +7,7 @@ verify_ssl = true
 pytest = "*"
 
 [packages]
-ubuntu-iso-download = "*"
 flask = "*"
-ubuntu-release-info = "*"
-distroinfo = "*"
 requests = "*"
 cachetools = "*"
 feedparser = "*"
