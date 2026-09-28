@@ -35,6 +35,7 @@ def get():
         download_data(
             version,
             url=f"https://download.gimp.org/mirror/pub/gimp/v{major_version}.{minor_version}/macos/gimp-{mac_intel_version}.dmg",
+            arch='x86_64',
             os='osx',
             get_size=True
         ),
