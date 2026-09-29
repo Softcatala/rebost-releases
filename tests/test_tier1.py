@@ -67,7 +67,21 @@ def test_check_urls_falls_back_to_ranged_get(monkeypatch):
     monkeypatch.setattr(utils.requests, 'get', get)
 
     assert utils.check_urls(['https://a/x.exe']) == {'https://a/x.exe': '4242'}
-    assert seen == {'Range': 'bytes=0-0'}
+    assert seen == {'Range': 'bytes=0-0', 'Accept-Encoding': 'identity'}
+
+
+def test_check_urls_asks_for_the_file_as_it_is(monkeypatch):
+    # a mirror that compresses the answer leaves the size out
+    seen = {}
+
+    def head(url, **kw):
+        seen.update(kw['headers'])
+        return Resp(200, {'Content-Length': '4242', 'Content-Type': 'application/octet-stream'})
+
+    monkeypatch.setattr(utils.requests, 'head', head)
+
+    assert utils.check_urls(['https://a/x.exe']) == {'https://a/x.exe': '4242'}
+    assert seen == {'Accept-Encoding': 'identity'}
 
 
 def test_cached_route_does_not_cache_failures():

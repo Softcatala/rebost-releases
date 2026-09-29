@@ -192,15 +192,18 @@ def __probe(url):
     """Returns the size in bytes ('' when unknown) if the url resolves to a
     file, None otherwise. Some hosts reject HEAD, so fall back to a one-byte
     ranged GET."""
+    # a mirror that compresses what it sends does not say how big the file is
+    as_is = {'Accept-Encoding': 'identity'}
+
     try:
-        r = requests.head(url, allow_redirects=True, timeout=REQUEST_TIMEOUT)
+        r = requests.head(url, headers=as_is, allow_redirects=True, timeout=REQUEST_TIMEOUT)
         if r.status_code == 200 and not __is_html(r):
             return r.headers.get('Content-Length', '')
     except requests.RequestException:
         pass
 
     try:
-        r = requests.get(url, headers={'Range': 'bytes=0-0'}, stream=True,
+        r = requests.get(url, headers={'Range': 'bytes=0-0', **as_is}, stream=True,
                          allow_redirects=True, timeout=REQUEST_TIMEOUT)
         r.close()
         if r.status_code not in (200, 206) or __is_html(r):

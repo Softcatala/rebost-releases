@@ -1,51 +1,46 @@
 import re
 
 import requests
-from cachetools import cached, TTLCache
+from cachetools import TTLCache
 
-from utils import add_program, download_data
+from utils import REQUEST_TIMEOUT, add_program, cached_route, checked_rows
 
 stable_url = 'https://download.documentfoundation.org/libreoffice/stable/'
 archive_url = 'https://downloadarchive.documentfoundation.org/libreoffice/old/'
 
+# The five routes publish the same build, so only the first one looks it up
+__build = TTLCache(maxsize=1, ttl=300)
 
+
+@cached_route()
 def get(program):
     if program not in __programs:
         return None
 
-    try:
-        return __cached_get(program)
-    except Exception as e:
-        print(f"libreoffice/{program}: {e!r}")
-
-    return None
+    return __programs[program](__latest_build())
 
 
-# Failures raise, so that they are not kept in the cache
-@cached(cache=TTLCache(maxsize=10, ttl=300))
-def __cached_get(program):
-    build = __get_latest_build()
+def __latest_build():
+    if 'latest' not in __build:
+        build = __get_latest_build()
 
-    if not build:
-        raise ValueError("could not find the latest LibreOffice version")
+        if not build:
+            raise ValueError("could not find the latest LibreOffice version")
 
-    return __programs[program](build)
+        __build['latest'] = build
+
+    return __build['latest']
 
 
 def __rows(build, entries):
     """entries: (os, arch, path, version label suffix)"""
     version = '.'.join(build.split('.')[:3])
 
-    return [
-        download_data(
-            version=f"{version}{label}",
-            get_size=True,
-            os=os,
-            arch=arch,
-            url=f"{archive_url}{build}/{path.format(b=build)}"
-        )
+    # checked in parallel: one after another, seven files take over 8 seconds
+    return checked_rows(version, [
+        (f"{archive_url}{build}/{path.format(b=build)}", os, arch, label)
         for os, arch, path, label in entries
-    ]
+    ])
 
 
 def __libreoffice(build):
@@ -120,14 +115,14 @@ def highest_build(listing, version):
 
 
 def __get_latest_build():
-    r = requests.get(stable_url)
+    r = requests.get(stable_url, timeout=REQUEST_TIMEOUT)
     r.raise_for_status()
     version = highest_stable(r.text)
 
     if not version:
         return None
 
-    r = requests.get(archive_url)
+    r = requests.get(archive_url, timeout=REQUEST_TIMEOUT)
     r.raise_for_status()
 
     return highest_build(r.text, version)
