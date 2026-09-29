@@ -1,51 +1,21 @@
-import json
-
-from cachetools import cached, TTLCache
-
-from utils import download_data, add_program, get_gitlab_tag_rss
+from utils import add_program, cached_route, checked_rows, download_data, get_gitlab_tag_rss
 
 gitlab_tags_rss = 'https://invent.kde.org/education/gcompris/-/tags?format=atom'
 
 add_program("kde", 'gcompris', 'gcompris')
 
 
-@cached(cache=TTLCache(maxsize=10, ttl=300))
+@cached_route()
 def get():
+    return build(get_gitlab_tag_rss(gitlab_tags_rss, 'V')['version'])
 
-    d = get_gitlab_tag_rss(gitlab_tags_rss, 'V')
 
-    version = d['version']
-
-    return [
-        download_data(
-            version,
-            url=f"https://gcompris.net/downloads-ca.html#linux",
-            os='linux',
-        ),
-        download_data(
-            version,
-            get_size=True,
-            url=f"https://gcompris.net/download/qt/macos/gcompris-qt-{version}-Darwin.dmg",
-            os='osx'
-        ),
-        download_data(
-            version,
-            get_size=True,
-            arch='x86_64',
-            url=f"https://gcompris.net/download/qt/windows/gcompris-qt-{version}-win64-gcc.exe",
-            os='windows'
-        ),
-        download_data(
-            version,
-            get_size=True,
-            arch='x86',
-            url=f"https://gcompris.net/download/qt/windows/gcompris-qt-{version}-win32-gcc.exe",
-            os='windows'
-        ),
-        download_data(
-            version,
-            url=f"https://play.google.com/store/apps/details?id=net.gcompris.full",
-            arch='generic',
-            os='android'
-        )
+def build(v):
+    # there are no 32-bit Windows or macOS builds any more
+    return checked_rows(v, [
+        (f"https://gcompris.net/download/qt/windows/gcompris-qt-{v}-win64-gcc.exe", 'windows', 'x86_64'),
+    ]) + [
+        download_data(v, url="https://gcompris.net/downloads-ca.html#linux", os='linux'),
+        download_data(v, url="https://play.google.com/store/apps/details?id=net.gcompris.full",
+                      arch='generic', os='android'),
     ]

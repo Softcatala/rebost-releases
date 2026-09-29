@@ -1,6 +1,6 @@
 import requests
 
-from utils import REQUEST_TIMEOUT, download_data, add_program, cached_route, get_amo_addon
+from utils import REQUEST_TIMEOUT, download_data, add_program, cached_route, checked_rows, get_amo_addon
 
 
 @cached_route()
@@ -20,7 +20,6 @@ add_program('mozilla', 'mozilla/dict-ca-valencia', 'corrector-ortografic-de-cata
 add_program('mozilla', 'mozilla/languagetool', 'corrector-gramatical-en-catala-languagetool-per-al-firefox')
 add_program('mozilla', 'mozilla/thunderbird', 'thunderbird')
 add_program('mozilla', 'mozilla/thunderbird-langpack-ca', 'paquet-catala-per-al-thunderbird')
-add_program('mozilla', 'mozilla/thunderbird-langpack-ca-valencia', 'paquet-catala-valencia-per-al-thunderbird')
 
 
 def __firefox_catala():
@@ -46,11 +45,11 @@ def __addon(addon_id):
 
 
 def __firefox_langpack_catala():
-    return __addon(5019)
+    return langpack('firefox', __get_version(_firefox_url, 'LATEST_FIREFOX_VERSION'), 'ca')
 
 
 def __firefox_langpack_valencia():
-    return __addon(9702)
+    return langpack('firefox', __get_version(_firefox_url, 'LATEST_FIREFOX_VERSION'), 'ca-valencia')
 
 
 def __dict_ca():
@@ -62,11 +61,18 @@ def __dict_ca_valencia():
 
 
 def __thunderbird_langpack_catala():
-    return __addon(5019)
+    # there is no Valencian pack: Thunderbird 91 was the last one to have it
+    return langpack('thunderbird', __get_version(_thunderbird_url, 'LATEST_THUNDERBIRD_VERSION'), 'ca')
 
 
-def __thunderbird_langpack_valencia():
-    return __addon(9702)
+def langpack(product, version, lang):
+    # A language pack only installs on the version it was built for, and the
+    # add-on sites serve the one of the beta. The one of the release is
+    # published next to the Linux build, and is the same for every platform.
+    return checked_rows(version, [
+        (f"https://archive.mozilla.org/pub/{product}/releases/{version}/linux-x86_64/xpi/{lang}.xpi",
+         'multiplataforma', 'generic'),
+    ])
 
 
 def __languagetool():
@@ -111,15 +117,8 @@ def __thunderbird():
         download_data(
             version=version,
             get_size=True,
-            arch='x86',
+            arch='x86_64',
             os='linux',
-            url=__get_url('thunderbird', version, 'linux', 'ca')
-        ),
-        download_data(
-            version=version,
-            get_size=True,
-            arch='x86',
-            os='linux_64',
             url=__get_url('thunderbird', version, 'linux64', 'ca')
         ),
     ]
@@ -157,15 +156,8 @@ def __firefox(lang):
         download_data(
             version=version,
             get_size=True,
-            arch='x86',
+            arch='x86_64',
             os='linux',
-            url=__get_url('firefox', version, 'linux', lang)
-        ),
-        download_data(
-            version=version,
-            get_size=True,
-            arch='x86',
-            os='linux_64',
             url=__get_url('firefox', version, 'linux64', lang)
         ),
         download_data(
@@ -193,7 +185,6 @@ __programs = {
     'languagetool': __languagetool,
     'thunderbird': __thunderbird,
     'thunderbird-langpack-ca': __thunderbird_langpack_catala,
-    'thunderbird-langpack-ca-valencia': __thunderbird_langpack_valencia,
 }
 
 

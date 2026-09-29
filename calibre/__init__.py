@@ -32,12 +32,6 @@ def get():
             os='windows'
         ),
         download_data(
-            version,
-            url="https://calibre-ebook.com/dist/win32",
-            arch='x86_64',
-            os='windows'
-        ),
-        download_data(
             version=f"{version} (portable)",
             url="https://calibre-ebook.com/download_portable",
             os='windows'

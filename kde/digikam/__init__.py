@@ -1,35 +1,23 @@
-from cachetools import cached, TTLCache
-
-from utils import download_data, get_scoop, add_program
+from utils import add_program, cached_route, checked_rows, download_data, get_scoop
 
 scoop_url = 'https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/digikam.json'
 
 add_program("kde", 'digikam', 'digikam')
 
 
-@cached(cache=TTLCache(maxsize=10, ttl=300))
+@cached_route()
 def get():
-    d = get_scoop(scoop_url)
+    return build(get_scoop(scoop_url)['version'])
 
-    version = d['version']
 
-    return [
-        download_data(
-            version,
-            url=f"https://www.digikam.org/download/binary/#Linux",
-            os='linux',
-        ),
-        download_data(
-            version,
-            get_size=True,
-            url=f"https://download.kde.org/stable/digikam/{version}/digiKam-{version}-MacOS-x86-64.pkg",
-            os='osx'
-        ),
-        download_data(
-            version,
-            get_size=True,
-            url=f"https://download.kde.org/stable/digikam/{version}/digiKam-{version}-Win64.exe",
-            arch='x86_64',
-            os='windows'
-        )
+def build(v):
+    base = f"https://download.kde.org/stable/digikam/{v}"
+
+    # the Intel macOS build is still the Qt5 one
+    return checked_rows(v, [
+        (f"{base}/digiKam-{v}-Qt6-Win64.exe", 'windows', 'x86_64'),
+        (f"{base}/digiKam-{v}-Qt5-MacOS-x86_64.pkg", 'osx', 'x86_64'),
+        (f"{base}/digiKam-{v}-Qt6-MacOS-arm64.pkg", 'osx', 'arm'),
+    ]) + [
+        download_data(v, url="https://www.digikam.org/download/binary/#Linux", os='linux'),
     ]

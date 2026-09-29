@@ -1,28 +1,21 @@
-from cachetools import cached, TTLCache
-
-from utils import download_data, add_program, get_eol_date
+from utils import add_program, cached_route, check_urls, download_data, get_eol_date
 
 add_program("opensuse", 'opensuse', 'opensuse')
 
 
-@cached(cache=TTLCache(maxsize=10, ttl=300))
+@cached_route()
 def get():
+    return build(get_eol_date('opensuse')['cycle'])
 
-    d = get_eol_date('opensuse')
 
-    version = d['cycle']
+def build(version):
+    # Leap 16 replaced the DVD image with an offline installer
+    leap = f"https://download.opensuse.org/distribution/leap/{version}/offline/Leap-{version}-offline-installer-x86_64.install.iso"
+    tumbleweed = "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Current.iso"
+
+    sizes = check_urls([leap, tumbleweed])
 
     return [
-        download_data(
-            version,
-            url=f"https://download.opensuse.org/distribution/leap/{version}/iso/openSUSE-Leap-{version}-DVD-x86_64-Media.iso",
-            os='linux',
-            get_size=True
-        ),
-        download_data(
-            'Tumbleweed',
-            url=f"https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Current.iso",
-            os='linux',
-            get_size=True
-        )
+        download_data(version, url=leap, size=sizes[leap], os='linux'),
+        download_data('Tumbleweed', url=tumbleweed, size=sizes[tumbleweed], os='linux'),
     ]

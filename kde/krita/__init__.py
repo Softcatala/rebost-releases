@@ -1,41 +1,23 @@
-from cachetools import cached, TTLCache
-
-from utils import download_data, get_scoop, add_program
+from utils import add_program, cached_route, checked_rows, download_data, get_scoop
 
 scoop_url = 'https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/krita.json'
 
 add_program("kde", 'krita', 'krita')
 
 
-@cached(cache=TTLCache(maxsize=10, ttl=300))
+@cached_route()
 def get():
+    return build(get_scoop(scoop_url)['version'])
 
-    d = get_scoop(scoop_url)
 
-    version = d['version']
+def build(v):
+    base = f"https://download.kde.org/stable/krita/{v}"
 
-    return [
-        download_data(
-            version,
-            url=f"appstream://org.kde.krita",
-            os='linux',
-        ),
-        download_data(
-            version,
-            get_size=True,
-            url=f"https://download.kde.org/stable/krita/{version}/krita-{version}.dmg",
-            os='osx'
-        ),
-        download_data(
-            version,
-            get_size=True,
-            url=f"https://download.kde.org/stable/krita/{version}/krita-x64-{version}-setup.exe",
-            os='windows'
-        ),
-        download_data(
-            version,
-            url=f"https://play.google.com/store/apps/details?id=org.krita",
-            arch='generic',
-            os='android'
-        )
+    return checked_rows(v, [
+        (f"{base}/krita-x64-{v}-setup.exe", 'windows', 'generic'),
+        (f"{base}/krita-{v}-signed.dmg", 'osx', 'generic'),
+    ]) + [
+        download_data(v, url="appstream://org.kde.krita", os='linux'),
+        download_data(v, url="https://play.google.com/store/apps/details?id=org.krita",
+                      arch='generic', os='android'),
     ]
