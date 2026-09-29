@@ -2,11 +2,9 @@ from types import SimpleNamespace
 
 import pytest
 
-import calibre
-import mozilla
-import opensuse
 import utils
-from kde import digikam, gcompris, kdenlive, krita
+from providers import calibre, mozilla, opensuse
+from providers.kde import digikam, gcompris, kdenlive, krita
 from utils import BrokenUrl
 
 

@@ -2,8 +2,8 @@ from pathlib import Path
 
 import pytest
 
-import libreoffice
 import utils
+from providers import libreoffice
 from utils import BrokenUrl
 
 FIXTURES = Path(__file__).parent / 'fixtures'

@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-import tor
+from providers import tor
 
 FIXTURES = Path(__file__).parent / 'fixtures'
 

@@ -5,7 +5,7 @@ import pytest
 
 import utils
 from utils import BrokenUrl
-from vendors import blender, linuxmint, omegat, opera, poedit, qgis, signal, sumatrapdf, virtualbox, zotero
+from providers import blender, linuxmint, omegat, opera, poedit, qgis, signal, sumatrapdf, virtualbox, zotero
 
 FIXTURES = Path(__file__).parent / 'fixtures' / 'vendors'
 

@@ -1,13 +1,7 @@
 import pytest
 
-import adobe
-import audacity
-import filezilla
-import subtitleedit
 import utils
-import vlc
-import winrar
-import softcatala
+from providers import adobe, audacity, filezilla, softcatala, subtitleedit, vlc, winrar
 from utils import BrokenUrl, parse_amo_addon, parse_github_release
 
 

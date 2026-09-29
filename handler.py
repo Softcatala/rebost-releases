@@ -1,29 +1,10 @@
 from flask import Flask, jsonify
 
-import calibre
-import debian
-import fedora
-import notepadplusplus
-import opensuse
-import sevenzip
-import tor
-import softcatala
-import github
-from vendors import (blender, keepass, linuxmint, omegat, opera, poedit, qgis, signal,
-                     sumatrapdf, virtualbox, zotero)
-import winrar
-import adobe
-import vlc
-import audacity
-import filezilla
-import subtitleedit
-from kde import digikam, krita, kdenlive, gcompris
-import gimp
-import libreoffice
-import mozilla
-import transmission
-import ubuntu
-import inkscape
+from providers import (adobe, audacity, blender, calibre, debian, fedora, filezilla, gimp, github,
+                       inkscape, keepass, libreoffice, linuxmint, mozilla, notepadplusplus, omegat,
+                       opensuse, opera, poedit, qgis, sevenzip, signal, softcatala, subtitleedit,
+                       sumatrapdf, tor, transmission, ubuntu, virtualbox, vlc, winrar, zotero)
+from providers.kde import digikam, gcompris, kdenlive, krita
 from utils import get_all_programs
 
 app = Flask(__name__)

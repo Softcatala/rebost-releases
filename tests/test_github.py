@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-import github
+from providers import github
 from utils import parse_github_release
 
 FIXTURES = Path(__file__).parent / 'fixtures' / 'github'

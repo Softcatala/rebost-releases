@@ -1,6 +1,6 @@
 from cachetools import cached, TTLCache
 
-from ubuntu import iso, releases
+from providers.ubuntu import iso, releases
 from utils import download_data, add_program
 
 add_program("ubuntu", 'ubuntu/ubuntu', 'ubuntu')

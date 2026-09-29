@@ -2,7 +2,7 @@ import re
 
 import pytest
 
-from ubuntu import iso, releases
+from providers.ubuntu import iso, releases
 
 META = """Dist: bionic
 Name: Bionic Beaver
