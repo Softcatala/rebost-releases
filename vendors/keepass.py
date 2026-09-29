@@ -1,11 +1,8 @@
-from utils import cached_route, checked_rows, get_scoop
+from utils import add_program, cached_route, checked_rows, get_scoop
 
 scoop_url = 'https://raw.githubusercontent.com/ScoopInstaller/Extras/master/bucket/keepass.json'
 
-# Not registered with add_program on purpose: the page documents KeePass 1.x,
-# and moving it to 2.x has to be confirmed first. To enable it, add
-#   add_program("keepass", 'keepass', 'keepass')
-# and the route in handler.py already exists.
+add_program("keepass", 'keepass', 'keepass')
 
 
 @cached_route()
