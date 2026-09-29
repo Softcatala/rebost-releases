@@ -21,7 +21,6 @@ from kde import digikam, krita, kdenlive, gcompris
 import gimp
 import libreoffice
 import mozilla
-import osmand
 import transmission
 import ubuntu
 import inkscape
@@ -67,15 +66,6 @@ def gimp_route():
 @app.route("/calibre")
 def calibre_route():
     r = calibre.get()
-    if r is not None:
-        return __jsonify(r)
-    else:
-        return "NoData", 404
-
-
-@app.route("/osmand")
-def osmand_route():
-    r = osmand.get()
     if r is not None:
         return __jsonify(r)
     else:
