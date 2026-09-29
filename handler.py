@@ -9,6 +9,8 @@ import sevenzip
 import tor
 import softcatala
 import github
+from vendors import (blender, keepass, linuxmint, omegat, opera, poedit, qgis, signal,
+                     sumatrapdf, virtualbox, zotero)
 import winrar
 import adobe
 import vlc
@@ -267,6 +269,103 @@ def subtitle_edit_route():
     else:
         return "NoData", 404
 
+@app.route("/opera")
+def opera_route():
+    r = opera.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/virtualbox")
+def virtualbox_route():
+    r = virtualbox.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/sumatrapdf")
+def sumatrapdf_route():
+    r = sumatrapdf.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/blender")
+def blender_route():
+    r = blender.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/linuxmint")
+def linuxmint_route():
+    r = linuxmint.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/poedit")
+def poedit_route():
+    r = poedit.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/keepass")
+def keepass_route():
+    r = keepass.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/signal")
+def signal_route():
+    r = signal.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/zotero")
+def zotero_route():
+    r = zotero.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/omegat")
+def omegat_route():
+    r = omegat.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/qgis")
+def qgis_route():
+    r = qgis.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
 
 
 def __jsonify(r):

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:files="https://sourceforge.net/api/files.rdf#" xmlns:media="http://video.search.yahoo.com/mrss/" xmlns:doap="http://usefulinc.com/ns/doap#" xmlns:sf="https://sourceforge.net/api/sfelements.rdf#" version="2.0">
+  <channel xmlns:files="https://sourceforge.net/api/files.rdf#" xmlns:media="http://video.search.yahoo.com/mrss/" xmlns:doap="http://usefulinc.com/ns/doap#" xmlns:sf="https://sourceforge.net/api/sfelements.rdf#">
+    <title>OmegaT - multiplatform CAT tool</title>
+    <link>https://sourceforge.net</link>
+    <description><![CDATA[Files from OmegaT - multiplatform CAT tool OmegaT is a free and open source multiplatform Computer Assisted Translation tool with fuzzy matching, translation memory, keyword search, glossaries, and translation leveraging into updated projects. ]]></description>
+    <pubDate>Tue, 29 Sep 2026 08:20:34 UT</pubDate>
+    <managingEditor>noreply@sourceforge.net (SourceForge.net)</managingEditor>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <item>
+      <title><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/OmegaT_6.1.1_Windows_64_signed.exe]]></title>
+      <link>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Windows_64_signed.exe/download</link>
+      <guid>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Windows_64_signed.exe/download</guid>
+      <pubDate>Sun, 16 Aug 2026 03:49:00 UT</pubDate>
+      <description><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/OmegaT_6.1.1_Windows_64_signed.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">65955989</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Windows_64_signed.exe/download" filesize="418235776"><media:hash algo="md5">de0b677ab0afa9409c88874d26c15d06</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/OmegaT_6.1.1_Windows_without_JRE_signed.exe]]></title>
+      <link>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Windows_without_JRE_signed.exe/download</link>
+      <guid>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Windows_without_JRE_signed.exe/download</guid>
+      <pubDate>Sun, 16 Aug 2026 01:59:13 UT</pubDate>
+      <description><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/OmegaT_6.1.1_Windows_without_JRE_signed.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">65955111</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Windows_without_JRE_signed.exe/download" filesize="392120496"><media:hash algo="md5">6511552b7c521285f8286a149eb82e1b</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/OmegaT_6.1.1_Windows_aarch64_signed.exe]]></title>
+      <link>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Windows_aarch64_signed.exe/download</link>
+      <guid>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Windows_aarch64_signed.exe/download</guid>
+      <pubDate>Sun, 16 Aug 2026 01:58:10 UT</pubDate>
+      <description><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/OmegaT_6.1.1_Windows_aarch64_signed.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">65955109</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Windows_aarch64_signed.exe/download" filesize="414789576"><media:hash algo="md5">96fa915da7e0be3b70d66f19882ffec4</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/OmegaT_6.1.1_Without_JRE.zip]]></title>
+      <link>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Without_JRE.zip/download</link>
+      <guid>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Without_JRE.zip/download</guid>
+      <pubDate>Sat, 15 Aug 2026 22:07:30 UT</pubDate>
+      <description><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/OmegaT_6.1.1_Without_JRE.zip]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">65950989</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">Zip archive data</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/zip; charset=binary" url="https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Without_JRE.zip/download" filesize="397766173"><media:hash algo="md5">6e01d716fccc84a966558433f87791c3</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/OmegaT_6.1.1_Source.zip]]></title>
+      <link>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Source.zip/download</link>
+      <guid>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Source.zip/download</guid>
+      <pubDate>Sat, 15 Aug 2026 22:07:04 UT</pubDate>
+      <description><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/OmegaT_6.1.1_Source.zip]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">65950987</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">Zip archive data</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/zip; charset=binary" url="https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Source.zip/download" filesize="420919794"><media:hash algo="md5">b86697964d68ee79e4cae78b48de38d3</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/omegat_6.1.1-3_arm64.deb]]></title>
+      <link>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/omegat_6.1.1-3_arm64.deb/download</link>
+      <guid>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/omegat_6.1.1-3_arm64.deb/download</guid>
+      <pubDate>Sat, 15 Aug 2026 15:16:06 UT</pubDate>
+      <description><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/omegat_6.1.1-3_arm64.deb]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">65921241</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">Debian binary package (format 2.0), with control.tar.zst, data compression zst</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.debian.binary-package; charset=binary" url="https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/omegat_6.1.1-3_arm64.deb/download" filesize="422978932"><media:hash algo="md5">15ce12206aa45b2a7945c600288921ee</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/omegat_6.1.1-3_amd64.deb]]></title>
+      <link>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/omegat_6.1.1-3_amd64.deb/download</link>
+      <guid>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/omegat_6.1.1-3_amd64.deb/download</guid>
+      <pubDate>Sat, 15 Aug 2026 15:16:13 UT</pubDate>
+      <description><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/omegat_6.1.1-3_amd64.deb]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">65921240</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">Debian binary package (format 2.0), with control.tar.zst, data compression zst</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.debian.binary-package; charset=binary" url="https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/omegat_6.1.1-3_amd64.deb/download" filesize="423547700"><media:hash algo="md5">4e0f91ffe840ce3d52c2750d5fa1175c</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/omegat-6.1.1-3.x86_64.rpm]]></title>
+      <link>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/omegat-6.1.1-3.x86_64.rpm/download</link>
+      <guid>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/omegat-6.1.1-3.x86_64.rpm/download</guid>
+      <pubDate>Sat, 15 Aug 2026 15:15:57 UT</pubDate>
+      <description><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/omegat-6.1.1-3.x86_64.rpm]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">65921208</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">unknown</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/x-rpm; charset=binary" url="https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/omegat-6.1.1-3.x86_64.rpm/download" filesize="449087639"><media:hash algo="md5">9bff94a80cb4d46202a246f9eb024957</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/omegat-6.1.1-3.aarch64.rpm]]></title>
+      <link>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/omegat-6.1.1-3.aarch64.rpm/download</link>
+      <guid>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/omegat-6.1.1-3.aarch64.rpm/download</guid>
+      <pubDate>Sat, 15 Aug 2026 15:15:58 UT</pubDate>
+      <description><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/omegat-6.1.1-3.aarch64.rpm]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">65921207</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">unknown</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/x-rpm; charset=binary" url="https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/omegat-6.1.1-3.aarch64.rpm/download" filesize="448411369"><media:hash algo="md5">51386698a65711eb1176226266b6dcef</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/OmegaT_6.1.1_Linux_ARM64.tar.bz2]]></title>
+      <link>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Linux_ARM64.tar.bz2/download</link>
+      <guid>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Linux_ARM64.tar.bz2/download</guid>
+      <pubDate>Sat, 15 Aug 2026 15:15:49 UT</pubDate>
+      <description><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/OmegaT_6.1.1_Linux_ARM64.tar.bz2]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">65921206</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">bzip2 compressed data</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/x-bzip2; charset=binary" url="https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Linux_ARM64.tar.bz2/download" filesize="435742985"><media:hash algo="md5">99565125220ce0a101ae5e6137a07c65</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/OmegaT_6.1.1_Linux_64.tar.bz2]]></title>
+      <link>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Linux_64.tar.bz2/download</link>
+      <guid>https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Linux_64.tar.bz2/download</guid>
+      <pubDate>Sat, 15 Aug 2026 15:16:05 UT</pubDate>
+      <description><![CDATA[/OmegaT - Standard/OmegaT 6.1.1/OmegaT_6.1.1_Linux_64.tar.bz2]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">65921201</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">bzip2 compressed data</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/x-bzip2; charset=binary" url="https://sourceforge.net/projects/omegat/files/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Linux_64.tar.bz2/download" filesize="436302927"><media:hash algo="md5">38bc785a612001aca0437f10ab01100c</media:hash></media:content>
+    </item>
+  </channel>
+</rss>

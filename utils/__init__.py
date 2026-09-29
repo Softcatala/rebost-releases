@@ -286,3 +286,16 @@ def parse_amo_addon(js):
         'url': js.get('url', ''),
         'size': (current.get('file') or {}).get('size', ''),
     }
+
+
+def checked_rows(version, specs):
+    """Rows for urls built from a vendor pattern. specs are
+    (url, os, arch[, version label suffix]); the urls must all resolve to
+    files, or BrokenUrl is raised and the route answers NoData."""
+    sizes = check_urls([spec[0] for spec in specs])
+
+    return [
+        download_data(f"{version}{spec[3] if len(spec) > 3 else ''}",
+                      url=spec[0], size=sizes[spec[0]], os=spec[1], arch=spec[2])
+        for spec in specs
+    ]

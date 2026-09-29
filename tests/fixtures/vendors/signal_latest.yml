@@ -1,0 +1,16 @@
+version: 8.28.0
+files:
+  - url: signal-desktop-win-x64-8.28.0.exe
+    sha512: jCEuerFSe9HiVtES7y40Wk+VmrzI7VOCpuB61WRLeZRv3JJdn7KN15ZRnWMItFGE+35QyAOoIPPE4LlLBHvmgw==
+    size: 141981864
+  - url: signal-desktop-win-arm64-8.28.0.exe
+    sha512: C+KX8BUaBZQjrsNAO9c7nIT1elQx/htVNiEFuja9x0iVChdkuclrT9aHxbYYacXJuGNTtDsIrxrZuoXyrWopNQ==
+    size: 140577304
+  - url: signal-desktop-win-8.28.0.exe
+    sha512: 3RceF5VG7oEmj7fgIAwidAU2694/AMW9Il0noRXW04tJI0FyDgosb+gTkMAqRuezA5VsKVv16mHBW1hsgbV/6g==
+    size: 281792712
+path: signal-desktop-win-x64-8.28.0.exe
+sha512: jCEuerFSe9HiVtES7y40Wk+VmrzI7VOCpuB61WRLeZRv3JJdn7KN15ZRnWMItFGE+35QyAOoIPPE4LlLBHvmgw==
+vendor:
+  minOSVersion: 10.0.10240
+releaseDate: '2026-09-23T21:40:14.407Z'

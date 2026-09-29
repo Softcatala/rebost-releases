@@ -1,0 +1,3 @@
+#QGIS Version 40202|Visit https://download.qgis.org to get your copy of version 4.2.2|<html><body>
+<ul>
+<li>The current released version of QGIS is 4.2.2.
