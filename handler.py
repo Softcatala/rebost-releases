@@ -28,8 +28,6 @@ from utils import get_all_programs
 
 app = Flask(__name__)
 
-app.config['ENV'] = 'development'
-
 
 @app.route("/")
 def index():
@@ -363,4 +361,7 @@ def __jsonify(r):
     return jsonify(r)
 
 
-app.run(host="0.0.0.0")
+# gunicorn serves the application in the image; this is only for running it by hand
+if __name__ == "__main__":
+    app.run(host="0.0.0.0")
+
