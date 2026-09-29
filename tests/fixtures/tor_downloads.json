@@ -1,0 +1,37 @@
+{
+   "comment" : "This file is deprecated and should not be used. Please use the files download-$platform.json instead.",
+   "downloads" : {
+      "linux-i686" : {
+         "ALL" : {
+            "binary" : "https://dist.torproject.org/torbrowser/15.0.23/tor-browser-linux-i686-15.0.23.tar.xz",
+            "sig" : "https://dist.torproject.org/torbrowser/15.0.23/tor-browser-linux-i686-15.0.23.tar.xz.asc"
+         }
+      },
+      "linux-x86_64" : {
+         "ALL" : {
+            "binary" : "https://dist.torproject.org/torbrowser/15.0.23/tor-browser-linux-x86_64-15.0.23.tar.xz",
+            "sig" : "https://dist.torproject.org/torbrowser/15.0.23/tor-browser-linux-x86_64-15.0.23.tar.xz.asc"
+         }
+      },
+      "macos" : {
+         "ALL" : {
+            "binary" : "https://dist.torproject.org/torbrowser/15.0.23/tor-browser-macos-15.0.23.dmg",
+            "sig" : "https://dist.torproject.org/torbrowser/15.0.23/tor-browser-macos-15.0.23.dmg.asc"
+         }
+      },
+      "win32" : {
+         "ALL" : {
+            "binary" : "https://dist.torproject.org/torbrowser/15.0.23/tor-browser-windows-i686-portable-15.0.23.exe",
+            "sig" : "https://dist.torproject.org/torbrowser/15.0.23/tor-browser-windows-i686-portable-15.0.23.exe.asc"
+         }
+      },
+      "win64" : {
+         "ALL" : {
+            "binary" : "https://dist.torproject.org/torbrowser/15.0.23/tor-browser-windows-x86_64-portable-15.0.23.exe",
+            "sig" : "https://dist.torproject.org/torbrowser/15.0.23/tor-browser-windows-x86_64-portable-15.0.23.exe.asc"
+         }
+      }
+   },
+   "tag" : "tbb-15.0.23-build1",
+   "version" : "15.0.23"
+}

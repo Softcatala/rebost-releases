@@ -1,103 +1,88 @@
-import requests, re
+import re
 
+import requests
 from cachetools import cached, TTLCache
 
 from utils import add_program, download_data
 
-@cached(cache=TTLCache(maxsize=10, ttl=300))
+stable_url = 'https://download.documentfoundation.org/libreoffice/stable/'
+archive_url = 'https://downloadarchive.documentfoundation.org/libreoffice/old/'
+
+
 def get(program):
-    if program in __programs:
-       return __programs[program]()
+    if program not in __programs:
+        return None
+
+    try:
+        return __cached_get(program)
+    except Exception as e:
+        print(f"libreoffice/{program}: {e!r}")
+
+    return None
 
 
-def __libreoffice():
-    d = __get_latest_version()
+# Failures raise, so that they are not kept in the cache
+@cached(cache=TTLCache(maxsize=10, ttl=300))
+def __cached_get(program):
+    build = __get_latest_build()
 
-    return [
-        download_data(
-            version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
-            get_size=True,
-            os='windows',
-            arch='x86',
-            url=__get_download_url(d['version'], 'win', 'x86', f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}")
-        ),
-        download_data(
-            version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
-            get_size=True,
-            os='windows',
-            arch='x86_64',
-            url=__get_download_url(d['version'], 'win', 'x86_64', f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}")
-        ),
-        download_data(
-            version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
-            get_size=True,
-            os='osx',
-            arch='x86_64',
-            url=__get_download_url(d['version'], 'mac', 'x86_64', f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}")
-        ),
-        download_data(
-            version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
-            os='linux',
-            arch='generic',
-            url="https://www.libreoffice.org/download/download/?type=deb-x86_64&lang=ca"
-        )
-    ]
+    if not build:
+        raise ValueError("could not find the latest LibreOffice version")
+
+    return __programs[program](build)
 
 
-def __help_pack(package="helppack", lang="ca"):
-    d = __get_latest_version()
-
+def __rows(build, entries):
+    """entries: (os, arch, path, version label suffix)"""
+    version = '.'.join(build.split('.')[:3])
 
     return [
         download_data(
-            version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
+            version=f"{version}{label}",
             get_size=True,
-            os='windows',
-            arch='x86',
-            url=__get_download_url(d['version'], 'win', 'x86', f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}", f"{package}_{lang}")
-        ),
-        download_data(
-            version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
-            get_size=True,
-            os='windows',
-            arch='x86_64',
-            url=__get_download_url(d['version'], 'win', 'x86_64', f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}", f"{package}_{lang}")
-        ),
-        download_data(
-            version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
-            os='linux',
-            arch='generic',
-            url=f"https://www.libreoffice.org/download/download/?type=deb-x86_64&lang={lang}"
+            os=os,
+            arch=arch,
+            url=f"{archive_url}{build}/{path.format(b=build)}"
         )
+        for os, arch, path, label in entries
     ]
 
 
-def __help_pack_valencia():
-    return __help_pack(lang="ca-valencia")
+def __libreoffice(build):
+    return __rows(build, [
+        ('windows', 'x86_64', 'win/x86_64/LibreOffice_{b}_Win_x86-64.msi', ''),
+        ('windows', 'x86', 'win/x86/LibreOffice_{b}_Win_x86.msi', ''),
+        ('windows', 'arm', 'win/aarch64/LibreOffice_{b}_Win_aarch64.msi', ''),
+        ('osx', 'x86_64', 'mac/x86_64/LibreOffice_{b}_MacOS_x86-64.dmg', ''),
+        ('osx', 'arm', 'mac/aarch64/LibreOffice_{b}_MacOS_aarch64.dmg', ''),
+        ('linux', 'x86_64', 'deb/x86_64/LibreOffice_{b}_Linux_x86-64_deb.tar.gz', ' (DEB)'),
+        ('linux', 'x86_64', 'rpm/x86_64/LibreOffice_{b}_Linux_x86-64_rpm.tar.gz', ' (RPM)'),
+    ])
 
 
-def __lang_pack(package="langpack", lang="ca"):
-    d = __get_latest_version()
-
-    return [
-        download_data(
-            version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
-            get_size=True,
-            os='osx',
-            arch='x86_64',
-            url=__get_download_url(d['version'], 'mac', 'x86_64', f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}", f"{package}_{lang}")
-        ),
-        download_data(
-            version=f"{d['majorVersion']}.{d['minorVersion']}.{d['patchVersion']}",
-            os='linux',
-            arch='generic',
-            url=f"https://www.libreoffice.org/download/download/?type=deb-x86_64&lang={lang}"
-        )
-    ]
+def __help_pack(build, lang="ca"):
+    return __rows(build, [
+        ('windows', 'x86_64', f'win/x86_64/LibreOffice_{{b}}_Win_x86-64_helppack_{lang}.msi', ''),
+        ('windows', 'x86', f'win/x86/LibreOffice_{{b}}_Win_x86_helppack_{lang}.msi', ''),
+        ('windows', 'arm', f'win/aarch64/LibreOffice_{{b}}_Win_aarch64_helppack_{lang}.msi', ''),
+        ('linux', 'x86_64', f'deb/x86_64/LibreOffice_{{b}}_Linux_x86-64_deb_helppack_{lang}.tar.gz', ''),
+    ])
 
 
-def __lang_pack_valencia():
-    return __lang_pack(lang="ca-valencia")
+def __help_pack_valencia(build):
+    return __help_pack(build, lang="ca-valencia")
+
+
+def __lang_pack(build, lang="ca"):
+    return __rows(build, [
+        ('osx', 'x86_64', f'mac/x86_64/LibreOffice_{{b}}_MacOS_x86-64_langpack_{lang}.dmg', ''),
+        ('osx', 'arm', f'mac/aarch64/LibreOffice_{{b}}_MacOS_aarch64_langpack_{lang}.dmg', ''),
+        ('linux', 'x86_64', f'deb/x86_64/LibreOffice_{{b}}_Linux_x86-64_deb_langpack_{lang}.tar.gz', ''),
+    ])
+
+
+def __lang_pack_valencia(build):
+    return __lang_pack(build, lang="ca-valencia")
 
 
 __programs = {
@@ -115,59 +100,34 @@ add_program("libreoffice", 'libreoffice/langpack-ca', 'paquet-catala-per-al-libr
 add_program("libreoffice", 'libreoffice/langpack-ca-valencia', 'paquet-catala-valencia-per-al-libreoffice')
 
 
-__arch_suffix = {
-    'win' : {
-        'x86': '_x86',
-        'x86_64': '_x86-64'
-    },
-    'mac' : {
-        'x86': '_x86',
-        'x86_64': '_x86-64'
-    }
-}
-
-__platform_suffix = {
-    'win': '_Win',
-    'mac': '_MacOS'
-}
-
-__extension = {
-    'win': 'msi',
-    'mac': 'dmg'
-}
+def __key(version):
+    return tuple(int(p) for p in version.split('.'))
 
 
-def __get_download_url(version, os, arch, shortversion, package=""):
-    base = 'https://downloadarchive.documentfoundation.org/libreoffice/old/'
+def highest_stable(listing):
+    """Highest released version in the stable/ listing (e.g. '26.8.0')."""
+    versions = re.findall(r'href="(\d+\.\d+\.\d+)/"', listing)
 
-    package = f'_{package}' if package != "" else ""
-
-    return f'{base}/{version}/{os}/{arch}/LibreOffice_{version}{__platform_suffix[os]}{__arch_suffix[os][arch]}{package}.{__extension[os]}'
+    return max(versions, key=__key) if versions else None
 
 
-def __get_latest_version():
-    url = 'https://downloadarchive.documentfoundation.org/libreoffice/old/latest/win/x86/'
+def highest_build(listing, version):
+    """Highest four-part build of `version` in the archive listing
+    (e.g. '26.8.0.3'); release candidates such as 26.8.0.0.beta1 are ignored."""
+    builds = re.findall(r'href="(' + re.escape(version) + r'\.\d+)/"', listing)
 
-    r = requests.get(url)
+    return max(builds, key=__key) if builds else None
 
-    body = r.text
 
-    exp = re.search('href="LibreOffice_([\d\.]+)_Win_x86.msi"', body)
+def __get_latest_build():
+    r = requests.get(stable_url)
+    r.raise_for_status()
+    version = highest_stable(r.text)
 
-    if exp:
-        g = exp.groups()
+    if not version:
+        return None
 
-        if g:
-            version = g[0]
+    r = requests.get(archive_url)
+    r.raise_for_status()
 
-            parts = version.split('.')
-
-            js = {}
-            js['version'] = version
-            js['majorVersion'] = parts[0]
-            if len(parts) > 1:
-                js['minorVersion'] = parts[1]
-            if len(parts) > 2:
-                js['patchVersion'] = parts[2]
-
-            return js
+    return highest_build(r.text, version)
