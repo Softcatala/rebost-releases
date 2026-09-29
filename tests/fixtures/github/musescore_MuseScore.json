@@ -1,0 +1,45 @@
+{
+ "tag_name": "v4.7.5",
+ "assets": [
+  {
+   "name": "checksums.sha256.txt",
+   "size": 896,
+   "browser_download_url": "https://github.com/musescore/MuseScore/releases/download/v4.7.5/checksums.sha256.txt"
+  },
+  {
+   "name": "MuseScore-Studio-4.7.5.260831071-aarch64.AppImage",
+   "size": 190441992,
+   "browser_download_url": "https://github.com/musescore/MuseScore/releases/download/v4.7.5/MuseScore-Studio-4.7.5.260831071-aarch64.AppImage"
+  },
+  {
+   "name": "MuseScore-Studio-4.7.5.260831071-aarch64.AppImage.zsync",
+   "size": 325735,
+   "browser_download_url": "https://github.com/musescore/MuseScore/releases/download/v4.7.5/MuseScore-Studio-4.7.5.260831071-aarch64.AppImage.zsync"
+  },
+  {
+   "name": "MuseScore-Studio-4.7.5.260831071-x86_64.AppImage",
+   "size": 194411000,
+   "browser_download_url": "https://github.com/musescore/MuseScore/releases/download/v4.7.5/MuseScore-Studio-4.7.5.260831071-x86_64.AppImage"
+  },
+  {
+   "name": "MuseScore-Studio-4.7.5.260831071-x86_64.AppImage.zsync",
+   "size": 332516,
+   "browser_download_url": "https://github.com/musescore/MuseScore/releases/download/v4.7.5/MuseScore-Studio-4.7.5.260831071-x86_64.AppImage.zsync"
+  },
+  {
+   "name": "MuseScore-Studio-4.7.5.260831071-x86_64.msi",
+   "size": 128745472,
+   "browser_download_url": "https://github.com/musescore/MuseScore/releases/download/v4.7.5/MuseScore-Studio-4.7.5.260831071-x86_64.msi"
+  },
+  {
+   "name": "MuseScore-Studio-4.7.5.260831071-x86_64.paf.exe",
+   "size": 138521976,
+   "browser_download_url": "https://github.com/musescore/MuseScore/releases/download/v4.7.5/MuseScore-Studio-4.7.5.260831071-x86_64.paf.exe"
+  },
+  {
+   "name": "MuseScore-Studio-4.7.5.260831071.dmg",
+   "size": 207816651,
+   "browser_download_url": "https://github.com/musescore/MuseScore/releases/download/v4.7.5/MuseScore-Studio-4.7.5.260831071.dmg"
+  }
+ ]
+}

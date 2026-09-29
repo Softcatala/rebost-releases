@@ -1,0 +1,150 @@
+{
+ "tag_name": "v31.5.3",
+ "assets": [
+  {
+   "name": "draw.io-31.5.3-windows-installer.exe",
+   "size": 146608608,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-31.5.3-windows-installer.exe"
+  },
+  {
+   "name": "draw.io-31.5.3-windows-installer.exe.blockmap",
+   "size": 153445,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-31.5.3-windows-installer.exe.blockmap"
+  },
+  {
+   "name": "draw.io-31.5.3-windows.zip",
+   "size": 182435517,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-31.5.3-windows.zip"
+  },
+  {
+   "name": "draw.io-31.5.3.msi",
+   "size": 151326720,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-31.5.3.msi"
+  },
+  {
+   "name": "draw.io-arm64-31.5.3-windows-arm64-installer.exe",
+   "size": 141042032,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-arm64-31.5.3-windows-arm64-installer.exe"
+  },
+  {
+   "name": "draw.io-arm64-31.5.3-windows-arm64-installer.exe.blockmap",
+   "size": 148798,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-arm64-31.5.3-windows-arm64-installer.exe.blockmap"
+  },
+  {
+   "name": "draw.io-arm64-31.5.3-windows-arm64-no-installer.exe",
+   "size": 140829216,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-arm64-31.5.3-windows-arm64-no-installer.exe"
+  },
+  {
+   "name": "draw.io-arm64-31.5.3.dmg",
+   "size": 159341451,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-arm64-31.5.3.dmg"
+  },
+  {
+   "name": "draw.io-arm64-31.5.3.dmg.blockmap",
+   "size": 166734,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-arm64-31.5.3.dmg.blockmap"
+  },
+  {
+   "name": "draw.io-arm64-31.5.3.zip",
+   "size": 154040692,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-arm64-31.5.3.zip"
+  },
+  {
+   "name": "draw.io-arm64-31.5.3.zip.blockmap",
+   "size": 164381,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-arm64-31.5.3.zip.blockmap"
+  },
+  {
+   "name": "draw.io-universal-31.5.3.dmg",
+   "size": 260770810,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-universal-31.5.3.dmg"
+  },
+  {
+   "name": "draw.io-universal-31.5.3.dmg.blockmap",
+   "size": 272058,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-universal-31.5.3.dmg.blockmap"
+  },
+  {
+   "name": "draw.io-x64-31.5.3.dmg",
+   "size": 166084467,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-x64-31.5.3.dmg"
+  },
+  {
+   "name": "draw.io-x64-31.5.3.dmg.blockmap",
+   "size": 174979,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-x64-31.5.3.dmg.blockmap"
+  },
+  {
+   "name": "draw.io-x64-31.5.3.zip",
+   "size": 160799019,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-x64-31.5.3.zip"
+  },
+  {
+   "name": "draw.io-x64-31.5.3.zip.blockmap",
+   "size": 169743,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-x64-31.5.3.zip.blockmap"
+  },
+  {
+   "name": "drawio-aarch64-31.5.3.rpm",
+   "size": 108057677,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/drawio-aarch64-31.5.3.rpm"
+  },
+  {
+   "name": "drawio-amd64-31.5.3.deb",
+   "size": 125016748,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/drawio-amd64-31.5.3.deb"
+  },
+  {
+   "name": "drawio-arm64-31.5.3.AppImage",
+   "size": 156207931,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/drawio-arm64-31.5.3.AppImage"
+  },
+  {
+   "name": "drawio-arm64-31.5.3.deb",
+   "size": 120171632,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/drawio-arm64-31.5.3.deb"
+  },
+  {
+   "name": "drawio-x86_64-31.5.3.AppImage",
+   "size": 154862691,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/drawio-x86_64-31.5.3.AppImage"
+  },
+  {
+   "name": "drawio-x86_64-31.5.3.rpm",
+   "size": 112775433,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/drawio-x86_64-31.5.3.rpm"
+  },
+  {
+   "name": "Files-SHA256-Hashes.txt",
+   "size": 2672,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/Files-SHA256-Hashes.txt"
+  },
+  {
+   "name": "latest-arm64.yml",
+   "size": 394,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/latest-arm64.yml"
+  },
+  {
+   "name": "latest-linux-arm64.yml",
+   "size": 689,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/latest-linux-arm64.yml"
+  },
+  {
+   "name": "latest-linux.yml",
+   "size": 690,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/latest-linux.yml"
+  },
+  {
+   "name": "latest-mac.yml",
+   "size": 964,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/latest-mac.yml"
+  },
+  {
+   "name": "latest.yml",
+   "size": 370,
+   "browser_download_url": "https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/latest.yml"
+  }
+ ]
+}

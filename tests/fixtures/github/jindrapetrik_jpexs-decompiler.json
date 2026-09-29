@@ -1,0 +1,40 @@
+{
+ "tag_name": "version26.3.0",
+ "assets": [
+  {
+   "name": "ffdec_26.3.0.deb",
+   "size": 19884690,
+   "browser_download_url": "https://github.com/jindrapetrik/jpexs-decompiler/releases/download/version26.3.0/ffdec_26.3.0.deb"
+  },
+  {
+   "name": "ffdec_26.3.0.msi",
+   "size": 20701184,
+   "browser_download_url": "https://github.com/jindrapetrik/jpexs-decompiler/releases/download/version26.3.0/ffdec_26.3.0.msi"
+  },
+  {
+   "name": "ffdec_26.3.0.pkg",
+   "size": 19887700,
+   "browser_download_url": "https://github.com/jindrapetrik/jpexs-decompiler/releases/download/version26.3.0/ffdec_26.3.0.pkg"
+  },
+  {
+   "name": "ffdec_26.3.0.zip",
+   "size": 19871169,
+   "browser_download_url": "https://github.com/jindrapetrik/jpexs-decompiler/releases/download/version26.3.0/ffdec_26.3.0.zip"
+  },
+  {
+   "name": "ffdec_26.3.0_macosx.zip",
+   "size": 19875977,
+   "browser_download_url": "https://github.com/jindrapetrik/jpexs-decompiler/releases/download/version26.3.0/ffdec_26.3.0_macosx.zip"
+  },
+  {
+   "name": "ffdec_lib_26.3.0.zip",
+   "size": 10552854,
+   "browser_download_url": "https://github.com/jindrapetrik/jpexs-decompiler/releases/download/version26.3.0/ffdec_lib_26.3.0.zip"
+  },
+  {
+   "name": "ffdec_lib_javadoc_26.3.0.zip",
+   "size": 8757608,
+   "browser_download_url": "https://github.com/jindrapetrik/jpexs-decompiler/releases/download/version26.3.0/ffdec_lib_javadoc_26.3.0.zip"
+  }
+ ]
+}

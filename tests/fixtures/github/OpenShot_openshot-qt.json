@@ -1,0 +1,85 @@
+{
+ "tag_name": "v4.0.1",
+ "assets": [
+  {
+   "name": "OpenShot-v4.0.1-x86.exe",
+   "size": 221256464,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86.exe"
+  },
+  {
+   "name": "OpenShot-v4.0.1-x86.exe.sha256sum",
+   "size": 89,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86.exe.sha256sum"
+  },
+  {
+   "name": "OpenShot-v4.0.1-x86.exe.sha256sum.verify",
+   "size": 296,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86.exe.sha256sum.verify"
+  },
+  {
+   "name": "OpenShot-v4.0.1-x86.exe.torrent",
+   "size": 17399,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86.exe.torrent"
+  },
+  {
+   "name": "OpenShot-v4.0.1-x86_64.AppImage",
+   "size": 252982464,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86_64.AppImage"
+  },
+  {
+   "name": "OpenShot-v4.0.1-x86_64.AppImage.sha256sum",
+   "size": 97,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86_64.AppImage.sha256sum"
+  },
+  {
+   "name": "OpenShot-v4.0.1-x86_64.AppImage.sha256sum.verify",
+   "size": 312,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86_64.AppImage.sha256sum.verify"
+  },
+  {
+   "name": "OpenShot-v4.0.1-x86_64.AppImage.torrent",
+   "size": 19835,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86_64.AppImage.torrent"
+  },
+  {
+   "name": "OpenShot-v4.0.1-x86_64.dmg",
+   "size": 292433992,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86_64.dmg"
+  },
+  {
+   "name": "OpenShot-v4.0.1-x86_64.dmg.sha256sum",
+   "size": 92,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86_64.dmg.sha256sum"
+  },
+  {
+   "name": "OpenShot-v4.0.1-x86_64.dmg.sha256sum.verify",
+   "size": 302,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86_64.dmg.sha256sum.verify"
+  },
+  {
+   "name": "OpenShot-v4.0.1-x86_64.dmg.torrent",
+   "size": 22825,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86_64.dmg.torrent"
+  },
+  {
+   "name": "OpenShot-v4.0.1-x86_64.exe",
+   "size": 226561445,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86_64.exe"
+  },
+  {
+   "name": "OpenShot-v4.0.1-x86_64.exe.sha256sum",
+   "size": 92,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86_64.exe.sha256sum"
+  },
+  {
+   "name": "OpenShot-v4.0.1-x86_64.exe.sha256sum.verify",
+   "size": 302,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86_64.exe.sha256sum.verify"
+  },
+  {
+   "name": "OpenShot-v4.0.1-x86_64.exe.torrent",
+   "size": 17805,
+   "browser_download_url": "https://github.com/OpenShot/openshot-qt/releases/download/v4.0.1/OpenShot-v4.0.1-x86_64.exe.torrent"
+  }
+ ]
+}

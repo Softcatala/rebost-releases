@@ -1,0 +1,645 @@
+{
+ "tag_name": "VeraCrypt_1.26.29",
+ "assets": [
+  {
+   "name": "README.TXT",
+   "size": 5716,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/README.TXT"
+  },
+  {
+   "name": "README.TXT.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/README.TXT.sig"
+  },
+  {
+   "name": "VeraCrypt-1.26.29-aarch64.AppImage",
+   "size": 13339144,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt-1.26.29-aarch64.AppImage"
+  },
+  {
+   "name": "VeraCrypt-1.26.29-aarch64.AppImage.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt-1.26.29-aarch64.AppImage.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-CentOS-6-i686.rpm",
+   "size": 13573728,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-CentOS-6-i686.rpm"
+  },
+  {
+   "name": "veracrypt-1.26.29-CentOS-6-i686.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-CentOS-6-i686.rpm.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-CentOS-6-x86_64.rpm",
+   "size": 13592988,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-CentOS-6-x86_64.rpm"
+  },
+  {
+   "name": "veracrypt-1.26.29-CentOS-6-x86_64.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-CentOS-6-x86_64.rpm.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-CentOS-7-i686.rpm",
+   "size": 13253268,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-CentOS-7-i686.rpm"
+  },
+  {
+   "name": "veracrypt-1.26.29-CentOS-7-i686.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-CentOS-7-i686.rpm.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-CentOS-7-x86_64.rpm",
+   "size": 13323736,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-CentOS-7-x86_64.rpm"
+  },
+  {
+   "name": "veracrypt-1.26.29-CentOS-7-x86_64.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-CentOS-7-x86_64.rpm.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-CentOS-8-x86_64.rpm",
+   "size": 13527336,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-CentOS-8-x86_64.rpm"
+  },
+  {
+   "name": "veracrypt-1.26.29-CentOS-8-x86_64.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-CentOS-8-x86_64.rpm.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-Debian-11-amd64.deb",
+   "size": 13847064,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Debian-11-amd64.deb"
+  },
+  {
+   "name": "veracrypt-1.26.29-Debian-11-amd64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Debian-11-amd64.deb.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-Debian-11-i386.deb",
+   "size": 14015216,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Debian-11-i386.deb"
+  },
+  {
+   "name": "veracrypt-1.26.29-Debian-11-i386.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Debian-11-i386.deb.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-Debian-12-amd64.deb",
+   "size": 13863872,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Debian-12-amd64.deb"
+  },
+  {
+   "name": "veracrypt-1.26.29-Debian-12-amd64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Debian-12-amd64.deb.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-Debian-12-i386.deb",
+   "size": 14056728,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Debian-12-i386.deb"
+  },
+  {
+   "name": "veracrypt-1.26.29-Debian-12-i386.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Debian-12-i386.deb.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-Debian-13-amd64.deb",
+   "size": 13905178,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Debian-13-amd64.deb"
+  },
+  {
+   "name": "veracrypt-1.26.29-Debian-13-amd64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Debian-13-amd64.deb.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-Debian-13-arm64.deb",
+   "size": 13727978,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Debian-13-arm64.deb"
+  },
+  {
+   "name": "veracrypt-1.26.29-Debian-13-arm64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Debian-13-arm64.deb.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-Fedora-43-x86_64.rpm",
+   "size": 10781280,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Fedora-43-x86_64.rpm"
+  },
+  {
+   "name": "veracrypt-1.26.29-Fedora-43-x86_64.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Fedora-43-x86_64.rpm.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-Fedora-44-x86_64.rpm",
+   "size": 10570041,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Fedora-44-x86_64.rpm"
+  },
+  {
+   "name": "veracrypt-1.26.29-Fedora-44-x86_64.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Fedora-44-x86_64.rpm.sig"
+  },
+  {
+   "name": "VeraCrypt-1.26.29-gtk2-legacy-i686.AppImage",
+   "size": 13176184,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt-1.26.29-gtk2-legacy-i686.AppImage"
+  },
+  {
+   "name": "VeraCrypt-1.26.29-gtk2-legacy-i686.AppImage.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt-1.26.29-gtk2-legacy-i686.AppImage.sig"
+  },
+  {
+   "name": "VeraCrypt-1.26.29-gtk2-legacy-x86_64.AppImage",
+   "size": 13064696,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt-1.26.29-gtk2-legacy-x86_64.AppImage"
+  },
+  {
+   "name": "VeraCrypt-1.26.29-gtk2-legacy-x86_64.AppImage.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt-1.26.29-gtk2-legacy-x86_64.AppImage.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-openSUSE-15-x86_64.rpm",
+   "size": 10133408,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-openSUSE-15-x86_64.rpm"
+  },
+  {
+   "name": "veracrypt-1.26.29-openSUSE-15-x86_64.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-openSUSE-15-x86_64.rpm.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-setup.tar.bz2",
+   "size": 89195907,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-setup.tar.bz2"
+  },
+  {
+   "name": "veracrypt-1.26.29-setup.tar.bz2.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-setup.tar.bz2.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-sha256sum.txt",
+   "size": 6072,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-sha256sum.txt"
+  },
+  {
+   "name": "veracrypt-1.26.29-sha256sum.txt.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-sha256sum.txt.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-sha512sum.txt",
+   "size": 9720,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-sha512sum.txt"
+  },
+  {
+   "name": "veracrypt-1.26.29-sha512sum.txt.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-sha512sum.txt.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-Ubuntu-22.04-amd64.deb",
+   "size": 13853384,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Ubuntu-22.04-amd64.deb"
+  },
+  {
+   "name": "veracrypt-1.26.29-Ubuntu-22.04-amd64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Ubuntu-22.04-amd64.deb.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-Ubuntu-24.04-amd64.deb",
+   "size": 16045308,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Ubuntu-24.04-amd64.deb"
+  },
+  {
+   "name": "veracrypt-1.26.29-Ubuntu-24.04-amd64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Ubuntu-24.04-amd64.deb.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-Ubuntu-24.04-arm64.deb",
+   "size": 15828788,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Ubuntu-24.04-arm64.deb"
+  },
+  {
+   "name": "veracrypt-1.26.29-Ubuntu-24.04-arm64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Ubuntu-24.04-arm64.deb.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-Ubuntu-25.10-amd64.deb",
+   "size": 13970132,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Ubuntu-25.10-amd64.deb"
+  },
+  {
+   "name": "veracrypt-1.26.29-Ubuntu-25.10-amd64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Ubuntu-25.10-amd64.deb.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-Ubuntu-26.04-amd64.deb",
+   "size": 13970278,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Ubuntu-26.04-amd64.deb"
+  },
+  {
+   "name": "veracrypt-1.26.29-Ubuntu-26.04-amd64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Ubuntu-26.04-amd64.deb.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-Ubuntu-26.04-arm64.deb",
+   "size": 13758330,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Ubuntu-26.04-arm64.deb"
+  },
+  {
+   "name": "veracrypt-1.26.29-Ubuntu-26.04-arm64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-Ubuntu-26.04-arm64.deb.sig"
+  },
+  {
+   "name": "veracrypt-1.26.29-x86-legacy-setup.tar.bz2",
+   "size": 28697534,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-x86-legacy-setup.tar.bz2"
+  },
+  {
+   "name": "veracrypt-1.26.29-x86-legacy-setup.tar.bz2.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-1.26.29-x86-legacy-setup.tar.bz2.sig"
+  },
+  {
+   "name": "VeraCrypt-1.26.29-x86_64.AppImage",
+   "size": 13421048,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt-1.26.29-x86_64.AppImage"
+  },
+  {
+   "name": "VeraCrypt-1.26.29-x86_64.AppImage.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt-1.26.29-x86_64.AppImage.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-CentOS-6-i686.rpm",
+   "size": 11997424,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-CentOS-6-i686.rpm"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-CentOS-6-i686.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-CentOS-6-i686.rpm.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-CentOS-6-x86_64.rpm",
+   "size": 12007248,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-CentOS-6-x86_64.rpm"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-CentOS-6-x86_64.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-CentOS-6-x86_64.rpm.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-CentOS-7-i686.rpm",
+   "size": 11648888,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-CentOS-7-i686.rpm"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-CentOS-7-i686.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-CentOS-7-i686.rpm.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-CentOS-7-x86_64.rpm",
+   "size": 11674980,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-CentOS-7-x86_64.rpm"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-CentOS-7-x86_64.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-CentOS-7-x86_64.rpm.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-CentOS-8-x86_64.rpm",
+   "size": 11767476,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-CentOS-8-x86_64.rpm"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-CentOS-8-x86_64.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-CentOS-8-x86_64.rpm.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Debian-11-amd64.deb",
+   "size": 13702154,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Debian-11-amd64.deb"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Debian-11-amd64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Debian-11-amd64.deb.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Debian-11-i386.deb",
+   "size": 13889500,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Debian-11-i386.deb"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Debian-11-i386.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Debian-11-i386.deb.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Debian-12-amd64.deb",
+   "size": 13733022,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Debian-12-amd64.deb"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Debian-12-amd64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Debian-12-amd64.deb.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Debian-12-i386.deb",
+   "size": 13937798,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Debian-12-i386.deb"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Debian-12-i386.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Debian-12-i386.deb.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Debian-13-amd64.deb",
+   "size": 13758370,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Debian-13-amd64.deb"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Debian-13-amd64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Debian-13-amd64.deb.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Debian-13-arm64.deb",
+   "size": 13616438,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Debian-13-arm64.deb"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Debian-13-arm64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Debian-13-arm64.deb.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Fedora-43-x86_64.rpm",
+   "size": 8855729,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Fedora-43-x86_64.rpm"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Fedora-43-x86_64.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Fedora-43-x86_64.rpm.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Fedora-44-x86_64.rpm",
+   "size": 8715942,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Fedora-44-x86_64.rpm"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Fedora-44-x86_64.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Fedora-44-x86_64.rpm.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-openSUSE-15-x86_64.rpm",
+   "size": 8565732,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-openSUSE-15-x86_64.rpm"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-openSUSE-15-x86_64.rpm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-openSUSE-15-x86_64.rpm.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Ubuntu-22.04-amd64.deb",
+   "size": 13751572,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Ubuntu-22.04-amd64.deb"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Ubuntu-22.04-amd64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Ubuntu-22.04-amd64.deb.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Ubuntu-24.04-amd64.deb",
+   "size": 13780784,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Ubuntu-24.04-amd64.deb"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Ubuntu-24.04-amd64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Ubuntu-24.04-amd64.deb.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Ubuntu-24.04-arm64.deb",
+   "size": 13652356,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Ubuntu-24.04-arm64.deb"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Ubuntu-24.04-arm64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Ubuntu-24.04-arm64.deb.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Ubuntu-25.10-amd64.deb",
+   "size": 13842024,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Ubuntu-25.10-amd64.deb"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Ubuntu-25.10-amd64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Ubuntu-25.10-amd64.deb.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Ubuntu-26.04-amd64.deb",
+   "size": 13841396,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Ubuntu-26.04-amd64.deb"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Ubuntu-26.04-amd64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Ubuntu-26.04-amd64.deb.sig"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Ubuntu-26.04-arm64.deb",
+   "size": 13674810,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Ubuntu-26.04-arm64.deb"
+  },
+  {
+   "name": "veracrypt-console-1.26.29-Ubuntu-26.04-arm64.deb.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/veracrypt-console-1.26.29-Ubuntu-26.04-arm64.deb.sig"
+  },
+  {
+   "name": "VeraCrypt-DCS-EFI-LGPL_1.26.29_Source.zip",
+   "size": 386161,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt-DCS-EFI-LGPL_1.26.29_Source.zip"
+  },
+  {
+   "name": "VeraCrypt-DCS-EFI-LGPL_1.26.29_Source.zip.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt-DCS-EFI-LGPL_1.26.29_Source.zip.sig"
+  },
+  {
+   "name": "VeraCrypt.Portable.1.26.29.exe",
+   "size": 40592280,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt.Portable.1.26.29.exe"
+  },
+  {
+   "name": "VeraCrypt.Portable.1.26.29.exe.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt.Portable.1.26.29.exe.sig"
+  },
+  {
+   "name": "VeraCrypt.Setup.1.26.29.exe",
+   "size": 40832408,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt.Setup.1.26.29.exe"
+  },
+  {
+   "name": "VeraCrypt.Setup.1.26.29.exe.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt.Setup.1.26.29.exe.sig"
+  },
+  {
+   "name": "VeraCrypt.User.Guide.chm",
+   "size": 2404921,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt.User.Guide.chm"
+  },
+  {
+   "name": "VeraCrypt.User.Guide.chm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt.User.Guide.chm.sig"
+  },
+  {
+   "name": "VeraCrypt.User.Guide.ru.chm",
+   "size": 1697153,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt.User.Guide.ru.chm"
+  },
+  {
+   "name": "VeraCrypt.User.Guide.ru.chm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt.User.Guide.ru.chm.sig"
+  },
+  {
+   "name": "VeraCrypt.User.Guide.zh-cn.chm",
+   "size": 2283520,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt.User.Guide.zh-cn.chm"
+  },
+  {
+   "name": "VeraCrypt.User.Guide.zh-cn.chm.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt.User.Guide.zh-cn.chm.sig"
+  },
+  {
+   "name": "VeraCrypt_1.26.29.dmg",
+   "size": 20012255,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_1.26.29.dmg"
+  },
+  {
+   "name": "VeraCrypt_1.26.29.dmg.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_1.26.29.dmg.sig"
+  },
+  {
+   "name": "VeraCrypt_1.26.29_Bundle.7z",
+   "size": 834438883,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_1.26.29_Bundle.7z"
+  },
+  {
+   "name": "VeraCrypt_1.26.29_Bundle.7z.checksums",
+   "size": 214,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_1.26.29_Bundle.7z.checksums"
+  },
+  {
+   "name": "VeraCrypt_1.26.29_Bundle.7z.checksums.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_1.26.29_Bundle.7z.checksums.sig"
+  },
+  {
+   "name": "VeraCrypt_1.26.29_Bundle.7z.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_1.26.29_Bundle.7z.sig"
+  },
+  {
+   "name": "VeraCrypt_1.26.29_Source.tar.bz2",
+   "size": 36302144,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_1.26.29_Source.tar.bz2"
+  },
+  {
+   "name": "VeraCrypt_1.26.29_Source.tar.bz2.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_1.26.29_Source.tar.bz2.sig"
+  },
+  {
+   "name": "VeraCrypt_1.26.29_Source.zip",
+   "size": 38938779,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_1.26.29_Source.zip"
+  },
+  {
+   "name": "VeraCrypt_1.26.29_Source.zip.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_1.26.29_Source.zip.sig"
+  },
+  {
+   "name": "VeraCrypt_1.26.29_Windows_Symbols.zip",
+   "size": 35654478,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_1.26.29_Windows_Symbols.zip"
+  },
+  {
+   "name": "VeraCrypt_1.26.29_Windows_Symbols.zip.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_1.26.29_Windows_Symbols.zip.sig"
+  },
+  {
+   "name": "VeraCrypt_FUSE-T_1.26.29.dmg",
+   "size": 20012297,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_FUSE-T_1.26.29.dmg"
+  },
+  {
+   "name": "VeraCrypt_FUSE-T_1.26.29.dmg.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_FUSE-T_1.26.29.dmg.sig"
+  },
+  {
+   "name": "VeraCrypt_Setup_arm64_1.26.29.msi",
+   "size": 46174208,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_Setup_arm64_1.26.29.msi"
+  },
+  {
+   "name": "VeraCrypt_Setup_arm64_1.26.29.msi.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_Setup_arm64_1.26.29.msi.sig"
+  },
+  {
+   "name": "VeraCrypt_Setup_x64_1.26.29.msi",
+   "size": 52789248,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_Setup_x64_1.26.29.msi"
+  },
+  {
+   "name": "VeraCrypt_Setup_x64_1.26.29.msi.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.29/VeraCrypt_Setup_x64_1.26.29.msi.sig"
+  }
+ ]
+}

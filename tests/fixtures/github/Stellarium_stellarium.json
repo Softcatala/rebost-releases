@@ -1,0 +1,115 @@
+{
+ "tag_name": "v26.3",
+ "assets": [
+  {
+   "name": "Stellarium-26.3-qt5-x86_64.AppImage",
+   "size": 577864896,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/Stellarium-26.3-qt5-x86_64.AppImage"
+  },
+  {
+   "name": "Stellarium-26.3-qt5-x86_64.AppImage.asc",
+   "size": 313,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/Stellarium-26.3-qt5-x86_64.AppImage.asc"
+  },
+  {
+   "name": "Stellarium-26.3-qt5-x86_64.zip",
+   "size": 474917618,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/Stellarium-26.3-qt5-x86_64.zip"
+  },
+  {
+   "name": "Stellarium-26.3-qt5-x86_64.zip.asc",
+   "size": 313,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/Stellarium-26.3-qt5-x86_64.zip.asc"
+  },
+  {
+   "name": "stellarium-26.3-qt6-arm64.exe",
+   "size": 457224640,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3-qt6-arm64.exe"
+  },
+  {
+   "name": "stellarium-26.3-qt6-arm64.exe.asc",
+   "size": 313,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3-qt6-arm64.exe.asc"
+  },
+  {
+   "name": "Stellarium-26.3-qt6-macOS.zip",
+   "size": 552945699,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/Stellarium-26.3-qt6-macOS.zip"
+  },
+  {
+   "name": "Stellarium-26.3-qt6-macOS.zip.asc",
+   "size": 313,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/Stellarium-26.3-qt6-macOS.zip.asc"
+  },
+  {
+   "name": "stellarium-26.3-qt6-win64.exe",
+   "size": 489006448,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3-qt6-win64.exe"
+  },
+  {
+   "name": "stellarium-26.3-qt6-win64.exe.asc",
+   "size": 313,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3-qt6-win64.exe.asc"
+  },
+  {
+   "name": "Stellarium-26.3-qt6-x86_64.AppImage",
+   "size": 598770880,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/Stellarium-26.3-qt6-x86_64.AppImage"
+  },
+  {
+   "name": "Stellarium-26.3-qt6-x86_64.AppImage.asc",
+   "size": 313,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/Stellarium-26.3-qt6-x86_64.AppImage.asc"
+  },
+  {
+   "name": "stellarium-26.3.tar.bz2",
+   "size": 557710180,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3.tar.bz2"
+  },
+  {
+   "name": "stellarium-26.3.tar.bz2.asc",
+   "size": 313,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3.tar.bz2.asc"
+  },
+  {
+   "name": "stellarium-26.3.tar.gz",
+   "size": 595176376,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3.tar.gz"
+  },
+  {
+   "name": "stellarium-26.3.tar.gz.asc",
+   "size": 313,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3.tar.gz.asc"
+  },
+  {
+   "name": "stellarium-26.3.tar.xz",
+   "size": 487843176,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3.tar.xz"
+  },
+  {
+   "name": "stellarium-26.3.tar.xz.asc",
+   "size": 313,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3.tar.xz.asc"
+  },
+  {
+   "name": "stellarium-26.3.zip",
+   "size": 597758983,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3.zip"
+  },
+  {
+   "name": "stellarium-26.3.zip.asc",
+   "size": 313,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3.zip.asc"
+  },
+  {
+   "name": "stellarium_user_guide-26.3-1.pdf",
+   "size": 16138016,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium_user_guide-26.3-1.pdf"
+  },
+  {
+   "name": "stellarium_user_guide-26.3-1.pdf.asc",
+   "size": 313,
+   "browser_download_url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium_user_guide-26.3-1.pdf.asc"
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "tag_name": "v4.0.5",
+ "assets": [
+  {
+   "name": "eXeLearning-4.0.5-universal-mac.zip",
+   "size": 242213335,
+   "browser_download_url": "https://github.com/exelearning/exelearning/releases/download/v4.0.5/eXeLearning-4.0.5-universal-mac.zip"
+  },
+  {
+   "name": "eXeLearning-4.0.5-universal-mac.zip.blockmap",
+   "size": 252955,
+   "browser_download_url": "https://github.com/exelearning/exelearning/releases/download/v4.0.5/eXeLearning-4.0.5-universal-mac.zip.blockmap"
+  },
+  {
+   "name": "eXeLearning-4.0.5-universal.dmg",
+   "size": 238620806,
+   "browser_download_url": "https://github.com/exelearning/exelearning/releases/download/v4.0.5/eXeLearning-4.0.5-universal.dmg"
+  },
+  {
+   "name": "eXeLearning-4.0.5-universal.dmg.blockmap",
+   "size": 251346,
+   "browser_download_url": "https://github.com/exelearning/exelearning/releases/download/v4.0.5/eXeLearning-4.0.5-universal.dmg.blockmap"
+  },
+  {
+   "name": "eXeLearning-4.0.5.msi",
+   "size": 148779008,
+   "browser_download_url": "https://github.com/exelearning/exelearning/releases/download/v4.0.5/eXeLearning-4.0.5.msi"
+  },
+  {
+   "name": "exelearning-4.0.5.x86_64.rpm",
+   "size": 109575269,
+   "browser_download_url": "https://github.com/exelearning/exelearning/releases/download/v4.0.5/exelearning-4.0.5.x86_64.rpm"
+  },
+  {
+   "name": "eXeLearning-Setup-4.0.5.exe",
+   "size": 133642792,
+   "browser_download_url": "https://github.com/exelearning/exelearning/releases/download/v4.0.5/eXeLearning-Setup-4.0.5.exe"
+  },
+  {
+   "name": "eXeLearning-Setup-4.0.5.exe.blockmap",
+   "size": 141043,
+   "browser_download_url": "https://github.com/exelearning/exelearning/releases/download/v4.0.5/eXeLearning-Setup-4.0.5.exe.blockmap"
+  },
+  {
+   "name": "exelearning-static-v4.0.5.zip",
+   "size": 26008681,
+   "browser_download_url": "https://github.com/exelearning/exelearning/releases/download/v4.0.5/exelearning-static-v4.0.5.zip"
+  },
+  {
+   "name": "exelearning_4.0.5_amd64.deb",
+   "size": 121400320,
+   "browser_download_url": "https://github.com/exelearning/exelearning/releases/download/v4.0.5/exelearning_4.0.5_amd64.deb"
+  },
+  {
+   "name": "latest-linux.yml",
+   "size": 510,
+   "browser_download_url": "https://github.com/exelearning/exelearning/releases/download/v4.0.5/latest-linux.yml"
+  },
+  {
+   "name": "latest-mac.yml",
+   "size": 529,
+   "browser_download_url": "https://github.com/exelearning/exelearning/releases/download/v4.0.5/latest-mac.yml"
+  },
+  {
+   "name": "latest.yml",
+   "size": 351,
+   "browser_download_url": "https://github.com/exelearning/exelearning/releases/download/v4.0.5/latest.yml"
+  }
+ ]
+}

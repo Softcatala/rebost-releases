@@ -1,0 +1,25 @@
+{
+ "tag_name": "v6.0.8",
+ "assets": [
+  {
+   "name": "Gramps-Arm-6.0.8-1.dmg",
+   "size": 117034458,
+   "browser_download_url": "https://github.com/gramps-project/gramps/releases/download/v6.0.8/Gramps-Arm-6.0.8-1.dmg"
+  },
+  {
+   "name": "Gramps-Intel-6.0.8-1.dmg",
+   "size": 122461682,
+   "browser_download_url": "https://github.com/gramps-project/gramps/releases/download/v6.0.8/Gramps-Intel-6.0.8-1.dmg"
+  },
+  {
+   "name": "GrampsAIO-6.0.8--1_win64.exe",
+   "size": 115599649,
+   "browser_download_url": "https://github.com/gramps-project/gramps/releases/download/v6.0.8/GrampsAIO-6.0.8--1_win64.exe"
+  },
+  {
+   "name": "gramps_6.0.8-1_amd64.snap",
+   "size": 93876224,
+   "browser_download_url": "https://github.com/gramps-project/gramps/releases/download/v6.0.8/gramps_6.0.8-1_amd64.snap"
+  }
+ ]
+}

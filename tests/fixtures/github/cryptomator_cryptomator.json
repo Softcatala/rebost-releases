@@ -1,0 +1,100 @@
+{
+ "tag_name": "1.19.3",
+ "assets": [
+  {
+   "name": "cryptomator-1.19.3-aarch64.AppImage",
+   "size": 61753864,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/cryptomator-1.19.3-aarch64.AppImage"
+  },
+  {
+   "name": "cryptomator-1.19.3-aarch64.AppImage.asc",
+   "size": 833,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/cryptomator-1.19.3-aarch64.AppImage.asc"
+  },
+  {
+   "name": "cryptomator-1.19.3-aarch64.AppImage.zsync",
+   "size": 211319,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/cryptomator-1.19.3-aarch64.AppImage.zsync"
+  },
+  {
+   "name": "cryptomator-1.19.3-aarch64.AppImage.zsync.asc",
+   "size": 833,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/cryptomator-1.19.3-aarch64.AppImage.zsync.asc"
+  },
+  {
+   "name": "Cryptomator-1.19.3-arm64.dmg",
+   "size": 62393246,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/Cryptomator-1.19.3-arm64.dmg"
+  },
+  {
+   "name": "Cryptomator-1.19.3-arm64.dmg.asc",
+   "size": 870,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/Cryptomator-1.19.3-arm64.dmg.asc"
+  },
+  {
+   "name": "Cryptomator-1.19.3-x64.dmg",
+   "size": 63801297,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/Cryptomator-1.19.3-x64.dmg"
+  },
+  {
+   "name": "Cryptomator-1.19.3-x64.dmg.asc",
+   "size": 870,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/Cryptomator-1.19.3-x64.dmg.asc"
+  },
+  {
+   "name": "Cryptomator-1.19.3-x64.exe",
+   "size": 57605976,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/Cryptomator-1.19.3-x64.exe"
+  },
+  {
+   "name": "Cryptomator-1.19.3-x64.exe.asc",
+   "size": 833,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/Cryptomator-1.19.3-x64.exe.asc"
+  },
+  {
+   "name": "Cryptomator-1.19.3-x64.msi",
+   "size": 56815616,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/Cryptomator-1.19.3-x64.msi"
+  },
+  {
+   "name": "Cryptomator-1.19.3-x64.msi.asc",
+   "size": 833,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/Cryptomator-1.19.3-x64.msi.asc"
+  },
+  {
+   "name": "cryptomator-1.19.3-x86_64.AppImage",
+   "size": 62700024,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/cryptomator-1.19.3-x86_64.AppImage"
+  },
+  {
+   "name": "cryptomator-1.19.3-x86_64.AppImage.asc",
+   "size": 833,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/cryptomator-1.19.3-x86_64.AppImage.asc"
+  },
+  {
+   "name": "cryptomator-1.19.3-x86_64.AppImage.zsync",
+   "size": 214551,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/cryptomator-1.19.3-x86_64.AppImage.zsync"
+  },
+  {
+   "name": "cryptomator-1.19.3-x86_64.AppImage.zsync.asc",
+   "size": 833,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/cryptomator-1.19.3-x86_64.AppImage.zsync.asc"
+  },
+  {
+   "name": "cryptomator-1.19.3.tar.gz.asc",
+   "size": 833,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/cryptomator-1.19.3.tar.gz.asc"
+  },
+  {
+   "name": "cryptomator_1.19.3-0ppa1_amd64.deb",
+   "size": 52309774,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/cryptomator_1.19.3-0ppa1_amd64.deb"
+  },
+  {
+   "name": "cryptomator_1.19.3-0ppa1_amd64.deb.asc",
+   "size": 833,
+   "browser_download_url": "https://github.com/cryptomator/cryptomator/releases/download/1.19.3/cryptomator_1.19.3-0ppa1_amd64.deb.asc"
+  }
+ ]
+}

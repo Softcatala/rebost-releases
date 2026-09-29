@@ -1,0 +1,55 @@
+{
+ "tag_name": "2.1.0",
+ "assets": [
+  {
+   "name": "geany-2.1.tar.bz2",
+   "size": 6908595,
+   "browser_download_url": "https://github.com/geany/geany/releases/download/2.1.0/geany-2.1.tar.bz2"
+  },
+  {
+   "name": "geany-2.1.tar.bz2.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/geany/geany/releases/download/2.1.0/geany-2.1.tar.bz2.sig"
+  },
+  {
+   "name": "geany-2.1.tar.gz",
+   "size": 9449500,
+   "browser_download_url": "https://github.com/geany/geany/releases/download/2.1.0/geany-2.1.tar.gz"
+  },
+  {
+   "name": "geany-2.1.tar.gz.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/geany/geany/releases/download/2.1.0/geany-2.1.tar.gz.sig"
+  },
+  {
+   "name": "geany-2.1_osx.dmg",
+   "size": 30988084,
+   "browser_download_url": "https://github.com/geany/geany/releases/download/2.1.0/geany-2.1_osx.dmg"
+  },
+  {
+   "name": "geany-2.1_osx_arm64.dmg",
+   "size": 29839998,
+   "browser_download_url": "https://github.com/geany/geany/releases/download/2.1.0/geany-2.1_osx_arm64.dmg"
+  },
+  {
+   "name": "geany-2.1_setup.exe",
+   "size": 28220816,
+   "browser_download_url": "https://github.com/geany/geany/releases/download/2.1.0/geany-2.1_setup.exe"
+  },
+  {
+   "name": "geany-2.1_setup.exe.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/geany/geany/releases/download/2.1.0/geany-2.1_setup.exe.sig"
+  },
+  {
+   "name": "geany-2.1_setup_unsigned.exe",
+   "size": 28220849,
+   "browser_download_url": "https://github.com/geany/geany/releases/download/2.1.0/geany-2.1_setup_unsigned.exe"
+  },
+  {
+   "name": "geany-2.1_setup_unsigned.exe.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/geany/geany/releases/download/2.1.0/geany-2.1_setup_unsigned.exe.sig"
+  }
+ ]
+}

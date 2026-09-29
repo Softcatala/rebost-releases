@@ -1,0 +1,40 @@
+{
+ "tag_name": "2.8.1",
+ "assets": [
+  {
+   "name": "Sigil-2.8.1-Windows-x64-Setup.exe",
+   "size": 146876685,
+   "browser_download_url": "https://github.com/Sigil-Ebook/Sigil/releases/download/2.8.1/Sigil-2.8.1-Windows-x64-Setup.exe"
+  },
+  {
+   "name": "Sigil-2.8.1-x86_64.AppImage",
+   "size": 198535672,
+   "browser_download_url": "https://github.com/Sigil-Ebook/Sigil/releases/download/2.8.1/Sigil-2.8.1-x86_64.AppImage"
+  },
+  {
+   "name": "Sigil-2.8.1-x86_64.AppImage.zsync",
+   "size": 339523,
+   "browser_download_url": "https://github.com/Sigil-Ebook/Sigil/releases/download/2.8.1/Sigil-2.8.1-x86_64.AppImage.zsync"
+  },
+  {
+   "name": "Sigil-2.8.1.tar.gz.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/Sigil-Ebook/Sigil/releases/download/2.8.1/Sigil-2.8.1.tar.gz.sig"
+  },
+  {
+   "name": "Sigil-2.8.1.zip.sig",
+   "size": 566,
+   "browser_download_url": "https://github.com/Sigil-Ebook/Sigil/releases/download/2.8.1/Sigil-2.8.1.zip.sig"
+  },
+  {
+   "name": "Sigil.app-2.8.1-Mac-arm64.txz",
+   "size": 129467312,
+   "browser_download_url": "https://github.com/Sigil-Ebook/Sigil/releases/download/2.8.1/Sigil.app-2.8.1-Mac-arm64.txz"
+  },
+  {
+   "name": "Sigil.app-2.8.1-Mac-x86_64.txz",
+   "size": 146380136,
+   "browser_download_url": "https://github.com/Sigil-Ebook/Sigil/releases/download/2.8.1/Sigil.app-2.8.1-Mac-x86_64.txz"
+  }
+ ]
+}

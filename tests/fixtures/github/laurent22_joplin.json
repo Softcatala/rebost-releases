@@ -1,0 +1,105 @@
+{
+ "tag_name": "v3.7.21",
+ "assets": [
+  {
+   "name": "Joplin-3.7.21-arm64.DMG",
+   "size": 208484343,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-3.7.21-arm64.DMG"
+  },
+  {
+   "name": "Joplin-3.7.21-arm64.dmg.blockmap",
+   "size": 217838,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-3.7.21-arm64.dmg.blockmap"
+  },
+  {
+   "name": "Joplin-3.7.21-arm64.pkg",
+   "size": 208136863,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-3.7.21-arm64.pkg"
+  },
+  {
+   "name": "Joplin-3.7.21-arm64.zip",
+   "size": 200073544,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-3.7.21-arm64.zip"
+  },
+  {
+   "name": "Joplin-3.7.21-arm64.zip.blockmap",
+   "size": 210217,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-3.7.21-arm64.zip.blockmap"
+  },
+  {
+   "name": "Joplin-3.7.21-mac.zip",
+   "size": 198453324,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-3.7.21-mac.zip"
+  },
+  {
+   "name": "Joplin-3.7.21-mac.zip.blockmap",
+   "size": 209015,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-3.7.21-mac.zip.blockmap"
+  },
+  {
+   "name": "Joplin-3.7.21.AppImage",
+   "size": 201462481,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-3.7.21.AppImage"
+  },
+  {
+   "name": "Joplin-3.7.21.AppImage.sha512",
+   "size": 128,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-3.7.21.AppImage.sha512"
+  },
+  {
+   "name": "Joplin-3.7.21.deb",
+   "size": 162700892,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-3.7.21.deb"
+  },
+  {
+   "name": "Joplin-3.7.21.dmg",
+   "size": 206702267,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-3.7.21.dmg"
+  },
+  {
+   "name": "Joplin-3.7.21.dmg.blockmap",
+   "size": 219276,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-3.7.21.dmg.blockmap"
+  },
+  {
+   "name": "Joplin-3.7.21.pkg",
+   "size": 206477574,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-3.7.21.pkg"
+  },
+  {
+   "name": "Joplin-Setup-3.7.21.exe",
+   "size": 361008040,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-Setup-3.7.21.exe"
+  },
+  {
+   "name": "Joplin-Setup-3.7.21.exe.blockmap",
+   "size": 378206,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/Joplin-Setup-3.7.21.exe.blockmap"
+  },
+  {
+   "name": "JoplinPortable.exe",
+   "size": 360779352,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/JoplinPortable.exe"
+  },
+  {
+   "name": "latest-linux.yml",
+   "size": 515,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/latest-linux.yml"
+  },
+  {
+   "name": "latest-mac-arm64.yml",
+   "size": 498,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/latest-mac-arm64.yml"
+  },
+  {
+   "name": "latest-mac.yml",
+   "size": 498,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/latest-mac.yml"
+  },
+  {
+   "name": "latest.yml",
+   "size": 344,
+   "browser_download_url": "https://github.com/laurent22/joplin/releases/download/v3.7.21/latest.yml"
+  }
+ ]
+}

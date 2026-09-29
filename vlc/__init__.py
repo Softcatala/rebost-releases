@@ -22,6 +22,6 @@ def build(v):
         download_data(v, url='https://www.videolan.org/vlc/#download', arch='generic', os='linux'),
         download_data(v, url='https://play.google.com/store/apps/details?id=org.videolan.vlc',
                       arch='generic', os='android'),
-        download_data(v, url='https://apps.apple.com/app/vlc-for-mobile/id650377962',
+        download_data(v, url='https://itunes.apple.com/app/vlc-ios/id650377962',
                       arch='generic', os='ios'),
     ]

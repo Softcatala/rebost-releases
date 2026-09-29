@@ -8,6 +8,7 @@ import opensuse
 import sevenzip
 import tor
 import softcatala
+import github
 import winrar
 import adobe
 import vlc
@@ -189,6 +190,15 @@ def fedora_route():
 @app.route("/opensuse")
 def opensuse_route():
     r = opensuse.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/github/<program>")
+def github_route(program):
+    r = github.get(program)
     if r is not None:
         return __jsonify(r)
     else:

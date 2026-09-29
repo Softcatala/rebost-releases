@@ -1,0 +1,45 @@
+{
+ "tag_name": "v2.2.1.5",
+ "assets": [
+  {
+   "name": "LibreCAD-v2.2.1.5-aarch64.AppImage",
+   "size": 76783824,
+   "browser_download_url": "https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.5/LibreCAD-v2.2.1.5-aarch64.AppImage"
+  },
+  {
+   "name": "LibreCAD-v2.2.1.5-arm64.dmg",
+   "size": 38913713,
+   "browser_download_url": "https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.5/LibreCAD-v2.2.1.5-arm64.dmg"
+  },
+  {
+   "name": "LibreCAD-v2.2.1.5-msvc.exe",
+   "size": 39969586,
+   "browser_download_url": "https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.5/LibreCAD-v2.2.1.5-msvc.exe"
+  },
+  {
+   "name": "LibreCAD-v2.2.1.5-win64-msvc.exe",
+   "size": 54350692,
+   "browser_download_url": "https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.5/LibreCAD-v2.2.1.5-win64-msvc.exe"
+  },
+  {
+   "name": "LibreCAD-v2.2.1.5-x86_64.AppImage",
+   "size": 41607480,
+   "browser_download_url": "https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.5/LibreCAD-v2.2.1.5-x86_64.AppImage"
+  },
+  {
+   "name": "LibreCAD-v2.2.1.5.dmg",
+   "size": 32388665,
+   "browser_download_url": "https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.5/LibreCAD-v2.2.1.5.dmg"
+  },
+  {
+   "name": "LibreCAD-v2.2.1.5.snap",
+   "size": 219123712,
+   "browser_download_url": "https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.5/LibreCAD-v2.2.1.5.snap"
+  },
+  {
+   "name": "LICENSE",
+   "size": 4035,
+   "browser_download_url": "https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.5/LICENSE"
+  }
+ ]
+}

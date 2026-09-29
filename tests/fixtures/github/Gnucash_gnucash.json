@@ -1,0 +1,35 @@
+{
+ "tag_name": "5.17",
+ "assets": [
+  {
+   "name": "gnucash-5.17.setup.exe",
+   "size": 184629453,
+   "browser_download_url": "https://github.com/Gnucash/gnucash/releases/download/5.17/gnucash-5.17.setup.exe"
+  },
+  {
+   "name": "gnucash-5.17.tar.bz2",
+   "size": 15663971,
+   "browser_download_url": "https://github.com/Gnucash/gnucash/releases/download/5.17/gnucash-5.17.tar.bz2"
+  },
+  {
+   "name": "gnucash-5.17.tar.gz",
+   "size": 22288025,
+   "browser_download_url": "https://github.com/Gnucash/gnucash/releases/download/5.17/gnucash-5.17.tar.gz"
+  },
+  {
+   "name": "Gnucash-Arm-5.17-1.dmg",
+   "size": 180289229,
+   "browser_download_url": "https://github.com/Gnucash/gnucash/releases/download/5.17/Gnucash-Arm-5.17-1.dmg"
+  },
+  {
+   "name": "gnucash-docs-5.17.tar.gz",
+   "size": 117817930,
+   "browser_download_url": "https://github.com/Gnucash/gnucash/releases/download/5.17/gnucash-docs-5.17.tar.gz"
+  },
+  {
+   "name": "Gnucash-Intel-5.17-1.dmg",
+   "size": 184214253,
+   "browser_download_url": "https://github.com/Gnucash/gnucash/releases/download/5.17/Gnucash-Intel-5.17-1.dmg"
+  }
+ ]
+}
