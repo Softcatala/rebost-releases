@@ -7,6 +7,13 @@ import notepadplusplus
 import opensuse
 import sevenzip
 import tor
+import softcatala
+import winrar
+import adobe
+import vlc
+import audacity
+import filezilla
+import subtitleedit
 from kde import digikam, krita, kdenlive, gcompris
 import gimp
 import libreoffice
@@ -182,6 +189,69 @@ def fedora_route():
 @app.route("/opensuse")
 def opensuse_route():
     r = opensuse.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/softcatala/<program>")
+def softcatala_route(program):
+    r = softcatala.get(program)
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/winrar")
+def winrar_route():
+    r = winrar.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/adobe-reader")
+def adobe_reader_route():
+    r = adobe.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/vlc")
+def vlc_route():
+    r = vlc.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/audacity")
+def audacity_route():
+    r = audacity.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/filezilla")
+def filezilla_route():
+    r = filezilla.get()
+    if r is not None:
+        return __jsonify(r)
+    else:
+        return "NoData", 404
+
+
+@app.route("/subtitle-edit")
+def subtitle_edit_route():
+    r = subtitleedit.get()
     if r is not None:
         return __jsonify(r)
     else:

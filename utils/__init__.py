@@ -1,10 +1,17 @@
+import functools
 import math
+import os as _os
+from concurrent.futures import ThreadPoolExecutor
 from typing import Dict
 
 import feedparser
 import requests
+from cachetools import TTLCache
 
 import re
+
+# WordPress gives each route 5 seconds, so upstream calls must be short
+REQUEST_TIMEOUT = 3
 
 def get_content_size(url):
     r = requests.head(url,allow_redirects=True)
@@ -46,7 +53,8 @@ def get_debian_package(package):
         return js
 
 def get_scoop(url):
-    r = requests.get(url)
+    r = requests.get(url, timeout=REQUEST_TIMEOUT)
+    r.raise_for_status()
 
     js = r.json()
 
@@ -145,3 +153,136 @@ def get_eol_date(program):
     js = r.json()
 
     return js[0]
+
+
+def cached_route(ttl=300):
+    """Caches the result of a route function. A failure (exception) or an
+    empty result is logged as such, answered with None and never cached, so the
+    route recovers as soon as upstream does."""
+    def decorator(fn):
+        cache = TTLCache(maxsize=32, ttl=ttl)
+
+        @functools.wraps(fn)
+        def wrapper(*args):
+            if args in cache:
+                return cache[args]
+
+            try:
+                result = fn(*args)
+            except Exception as e:
+                print(f"{fn.__module__}{args or ''}: {e!r}")
+                return None
+
+            if not result:
+                print(f"{fn.__module__}{args or ''}: no data")
+                return None
+
+            cache[args] = result
+            return result
+
+        return wrapper
+    return decorator
+
+
+class BrokenUrl(Exception):
+    pass
+
+
+def __probe(url):
+    """Returns the size in bytes ('' when unknown) if the url resolves to a
+    file, None otherwise. Some hosts reject HEAD, so fall back to a one-byte
+    ranged GET."""
+    try:
+        r = requests.head(url, allow_redirects=True, timeout=REQUEST_TIMEOUT)
+        if r.status_code == 200 and not __is_html(r):
+            return r.headers.get('Content-Length', '')
+    except requests.RequestException:
+        pass
+
+    try:
+        r = requests.get(url, headers={'Range': 'bytes=0-0'}, stream=True,
+                         allow_redirects=True, timeout=REQUEST_TIMEOUT)
+        r.close()
+        if r.status_code not in (200, 206) or __is_html(r):
+            return None
+
+        total = r.headers.get('Content-Range', '').rpartition('/')[2]
+        if total.isdigit():
+            return total
+        return r.headers.get('Content-Length', '') if r.status_code == 200 else ''
+    except requests.RequestException:
+        return None
+
+
+def __is_html(response):
+    return response.headers.get('Content-Type', '').startswith('text/html')
+
+
+def check_urls(urls):
+    """Checks in parallel that every url resolves to a file. Returns
+    {url: size} and raises BrokenUrl when any of them does not."""
+    urls = list(dict.fromkeys(urls))
+
+    with ThreadPoolExecutor(max_workers=max(len(urls), 1)) as pool:
+        sizes = list(pool.map(__probe, urls))
+
+    broken = [u for u, s in zip(urls, sizes) if s is None]
+    if broken:
+        raise BrokenUrl(f"does not resolve to a file: {', '.join(broken)}")
+
+    return dict(zip(urls, sizes))
+
+
+def get_github_release(repo, tag_prefix=''):
+    """Latest release of a GitHub repository: the tag, the version (tag
+    without prefix) and the assets as {name: {'url', 'size'}}."""
+    headers = {'Accept': 'application/vnd.github+json'}
+    token = _os.environ.get('GITHUB_TOKEN')
+    if token:
+        headers['Authorization'] = f'Bearer {token}'
+
+    r = requests.get(f'https://api.github.com/repos/{repo}/releases/latest',
+                     headers=headers, timeout=REQUEST_TIMEOUT)
+    r.raise_for_status()
+
+    return parse_github_release(r.json(), tag_prefix)
+
+
+def parse_github_release(js, tag_prefix=''):
+    tag = js['tag_name']
+    version = tag[len(tag_prefix):] if tag.startswith(tag_prefix) else tag
+
+    return {
+        'tag': tag,
+        'version': version,
+        'assets': {
+            a['name']: {'url': a['browser_download_url'], 'size': a['size']}
+            for a in js.get('assets', [])
+        },
+    }
+
+
+def github_asset(release, name):
+    try:
+        return release['assets'][name]
+    except KeyError:
+        raise ValueError(f"release {release['tag']} has no asset {name}")
+
+
+def get_amo_addon(id_or_slug):
+    """Current version of a Mozilla add-on: {'version', 'url', 'size'}."""
+    r = requests.get(f'https://addons.mozilla.org/api/v5/addons/addon/{id_or_slug}/',
+                     timeout=REQUEST_TIMEOUT)
+    r.raise_for_status()
+
+    return parse_amo_addon(r.json())
+
+
+def parse_amo_addon(js):
+    current = js['current_version']
+
+    return {
+        'version': current['version'],
+        'url': js.get('url', ''),
+        'size': (current.get('file') or {}).get('size', ''),
+    }

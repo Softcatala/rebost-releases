@@ -1,10 +1,9 @@
 import requests
-from cachetools import TTLCache, cached
 
-from utils import download_data, add_program
+from utils import REQUEST_TIMEOUT, download_data, add_program, cached_route, get_amo_addon
 
 
-@cached(cache=TTLCache(maxsize=10, ttl=300))
+@cached_route()
 def get(program):
     if program in __programs:
         return __programs[program]()
@@ -15,7 +14,10 @@ add_program('mozilla', 'mozilla/firefox-valencia', 'firefox-en-valencia')
 add_program('mozilla', 'mozilla/firefox-langpack-ca', 'paquet-catala-per-al-firefox')
 add_program('mozilla', 'mozilla/firefox-langpack-ca-valencia', 'paquet-catala-valencia-per-al-firefox')
 add_program('mozilla', 'mozilla/dict-ca', 'diccionari-catala-firefox')
+add_program('mozilla', 'mozilla/dict-ca', 'corrector-ortografic-de-catala-general-per-a-mozilla')
 add_program('mozilla', 'mozilla/dict-ca-valencia', 'diccionari-valencia-firefox')
+add_program('mozilla', 'mozilla/dict-ca-valencia', 'corrector-ortografic-de-catala-valencia-per-a-mozilla')
+add_program('mozilla', 'mozilla/languagetool', 'corrector-gramatical-en-catala-languagetool-per-al-firefox')
 add_program('mozilla', 'mozilla/thunderbird', 'thunderbird')
 add_program('mozilla', 'mozilla/thunderbird-langpack-ca', 'paquet-catala-per-al-thunderbird')
 add_program('mozilla', 'mozilla/thunderbird-langpack-ca-valencia', 'paquet-catala-valencia-per-al-thunderbird')
@@ -29,74 +31,54 @@ def __firefox_valencia():
     return __firefox('ca-valencia')
 
 
-def __firefox_langpack_catala():
+def __addon(addon_id):
+    addon = get_amo_addon(addon_id)
+
     return [
         download_data(
-            version='',
-            get_size=True,
+            version=addon['version'],
+            size=addon['size'],
             arch='generic',
             os='multiplataforma',
-            url='https://addons.mozilla.org/firefox/downloads/latest/5019/addon-5019-latest.xpi'
+            url=f'https://addons.mozilla.org/firefox/downloads/latest/{addon_id}/addon-{addon_id}-latest.xpi'
         )
     ]
+
+
+def __firefox_langpack_catala():
+    return __addon(5019)
 
 
 def __firefox_langpack_valencia():
-    return [
-        download_data(
-            version='',
-            get_size=True,
-            arch='generic',
-            os='multiplataforma',
-            url='https://addons.mozilla.org/firefox/downloads/latest/9702/addon-9702-latest.xpi'
-        )
-    ]
+    return __addon(9702)
 
 
 def __dict_ca():
-    return [
-        download_data(
-            version='',
-            get_size=True,
-            arch='generic',
-            os='multiplataforma',
-            url='https://addons.mozilla.org/firefox/downloads/latest/3369/addon-3369-latest.xpi'
-        )
-    ]
+    return __addon(3369)
 
 
 def __dict_ca_valencia():
-    return [
-        download_data(
-            version='',
-            get_size=True,
-            arch='generic',
-            os='multiplataforma',
-            url='https://addons.mozilla.org/firefox/downloads/latest/9192/addon-9192-latest.xpi'
-        )
-    ]
+    return __addon(9192)
 
 
 def __thunderbird_langpack_catala():
-    return [
-        download_data(
-            version='',
-            get_size=True,
-            arch='generic',
-            os='multiplataforma',
-            url='https://addons.mozilla.org/firefox/downloads/latest/5019/addon-5019-latest.xpi'
-        )
-    ]
+    return __addon(5019)
 
 
 def __thunderbird_langpack_valencia():
+    return __addon(9702)
+
+
+def __languagetool():
+    addon = get_amo_addon('languagetool')
+
+    # links to the add-on page, as the site does today
     return [
         download_data(
-            version='',
-            get_size=True,
+            version=addon['version'],
             arch='generic',
             os='multiplataforma',
-            url='https://addons.mozilla.org/firefox/downloads/latest/9702/addon-9702-latest.xpi'
+            url='https://addons.mozilla.org/firefox/addon/languagetool/'
         )
     ]
 
@@ -208,6 +190,7 @@ __programs = {
     'firefox-langpack-ca-valencia': __firefox_langpack_valencia,
     'dict-ca': __dict_ca,
     'dict-ca-valencia': __dict_ca_valencia,
+    'languagetool': __languagetool,
     'thunderbird': __thunderbird,
     'thunderbird-langpack-ca': __thunderbird_langpack_catala,
     'thunderbird-langpack-ca-valencia': __thunderbird_langpack_valencia,
@@ -219,8 +202,7 @@ def __get_url(product, version, moz_os, lang):
 
 
 def __get_version(url, key):
-    r = requests.get(url)
+    r = requests.get(url, timeout=REQUEST_TIMEOUT)
+    r.raise_for_status()
 
-    js = r.json()
-
-    return js[key]
+    return r.json()[key]
