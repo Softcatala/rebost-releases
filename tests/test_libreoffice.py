@@ -110,3 +110,48 @@ def test_missing_file_publishes_nothing(monkeypatch):
 
     with pytest.raises(BrokenUrl):
         fresh('helppack-ca-valencia')
+
+
+# On release day stable/ lists 26.8.1 while the archive holds only the first
+# release candidate, 26.8.1.1, with most of its files missing
+STABLE_AHEAD = STABLE.replace('href="26.8.0/"', 'href="26.8.0/"> <a href="26.8.1/"')
+
+
+def archive_lags(monkeypatch, old=OLD):
+    class R:
+        def __init__(self, text): self.text = text
+        def raise_for_status(self): pass
+
+    monkeypatch.setattr(libreoffice.requests, 'get',
+                        lambda url, **kwargs: R(STABLE_AHEAD if url == libreoffice.stable_url else old))
+
+    def check(urls):
+        if any(u.startswith(libreoffice.archive_url) for u in urls):
+            raise BrokenUrl('not there yet')
+        return {u: '1024' for u in urls}
+
+    monkeypatch.setattr(utils, 'check_urls', check)
+
+
+def test_stable_links_while_the_archive_has_only_a_release_candidate(monkeypatch):
+    archive_lags(monkeypatch)
+
+    rows = fresh('libreoffice')
+
+    assert len(rows) == 7
+    assert {r['download_version'] for r in rows} == {'26.8.1', '26.8.1 (DEB)', '26.8.1 (RPM)'}
+    assert rows[0]['download_url'] == (
+        'https://download.documentfoundation.org/libreoffice/stable/26.8.1/'
+        'win/x86_64/LibreOffice_26.8.1_Win_x86-64.msi'
+    )
+
+
+def test_stable_links_while_the_archive_has_no_build(monkeypatch):
+    archive_lags(monkeypatch, old=OLD.replace('26.8.1.1', '26.8.0.9'))
+
+    rows = fresh('langpack-ca')
+
+    assert rows[0]['download_url'] == (
+        'https://download.documentfoundation.org/libreoffice/stable/26.8.1/'
+        'mac/x86_64/LibreOffice_26.8.1_MacOS_x86-64_langpack_ca.dmg'
+    )

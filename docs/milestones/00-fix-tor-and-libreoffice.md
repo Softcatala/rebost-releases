@@ -104,6 +104,11 @@ caller crashes.
   permanent, which is why the LibreOffice page still downloads today after the
   provider failed. Tor's links are not permanent, and that page has no working
   desktop link.
+- The archive lags behind `stable/`. On 2026-10-04 `stable/` listed 26.8.1
+  while the archive held only its first release candidate, `26.8.1.1`, with
+  most files missing, and every route answered `404 NoData`. Until the
+  archive build resolves, the routes publish the same files from
+  `stable/<version>/`, and switch to the archive once it has them.
 - The two are the same files. `stable/26.8.0/.../LibreOffice_26.8.0_Win_x86-64.msi`
   and `old/26.8.0.3/.../LibreOffice_26.8.0.3_Win_x86-64.msi` have the same
   SHA-256.
