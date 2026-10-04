@@ -3,7 +3,7 @@ import re
 import requests
 from cachetools import TTLCache
 
-from utils import REQUEST_TIMEOUT, add_program, cached_route, checked_rows
+from utils import REQUEST_TIMEOUT, BrokenUrl, add_program, cached_route, checked_rows
 
 stable_url = 'https://download.documentfoundation.org/libreoffice/stable/'
 archive_url = 'https://downloadarchive.documentfoundation.org/libreoffice/old/'
@@ -24,7 +24,7 @@ def __latest_build():
     if 'latest' not in __build:
         build = __get_latest_build()
 
-        if not build:
+        if not build[0]:
             raise ValueError("could not find the latest LibreOffice version")
 
         __build['latest'] = build
@@ -32,13 +32,26 @@ def __latest_build():
     return __build['latest']
 
 
-def __rows(build, entries):
-    """entries: (os, arch, path, version label suffix)"""
-    version = '.'.join(build.split('.')[:3])
+def __rows(latest, entries):
+    """latest: (version, build); entries: (os, arch, path, version label suffix)"""
+    version, build = latest
 
+    # The archive gets the final build some days after stable/ lists the
+    # release, and until then holds only its release candidates. Its links are
+    # permanent, so they are preferred; stable/ ones expire with the release.
+    if build:
+        try:
+            return __checked(version, archive_url + build, build, entries)
+        except BrokenUrl as e:
+            print(f"providers.libreoffice: {build} not in the archive yet, using stable/: {e}")
+
+    return __checked(version, stable_url + version, version, entries)
+
+
+def __checked(version, base, name, entries):
     # checked in parallel: one after another, seven files take over 8 seconds
     return checked_rows(version, [
-        (f"{archive_url}{build}/{path.format(b=build)}", os, arch, label)
+        (f"{base}/{path.format(b=name)}", os, arch, label)
         for os, arch, path, label in entries
     ])
 
@@ -115,14 +128,16 @@ def highest_build(listing, version):
 
 
 def __get_latest_build():
+    """(version, build): the highest version in stable/ and its highest build
+    in the archive, None while the archive has no build of it yet."""
     r = requests.get(stable_url, timeout=REQUEST_TIMEOUT)
     r.raise_for_status()
     version = highest_stable(r.text)
 
     if not version:
-        return None
+        return None, None
 
     r = requests.get(archive_url, timeout=REQUEST_TIMEOUT)
     r.raise_for_status()
 
-    return highest_build(r.text, version)
+    return version, highest_build(r.text, version)
