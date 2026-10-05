@@ -27,7 +27,7 @@ def get():
         ),
         download_data(
             version,
-            url=f"https://inkscape.org/release/inkscape-{version}/mac-os-x/dmg/dl/",
+            url=f"https://inkscape.org/release/inkscape-{version}/mac-os-x/dmg-arm64/dl/",
             os='osx',
             arch='arm'
         ),
